@@ -4,6 +4,7 @@
 ## 목차
 1. DefaultPrint
 2. SerialClassPrint
+3. Eco
 ## 1. DefaultPrint
 ### 코드
 ```c++
@@ -55,3 +56,28 @@ int main(){
 ```
 ### 결과 사진
 ![DefaultPrint](https://github.com/HongyeongJu/MbedCode/blob/master/Chapter02_UART%ED%86%B5%EC%8B%A0/2_SerialClassPrint_result.jpg)
+
+
+
+## 3. Eco
+### 코드
+```c++
+/*
+2020-12-20    7장_UART Eco_109page
+회로 : X
+컴퓨터와 UART 시리얼 통신- Eco
+ */
+#include "mbed.h"
+
+Serial PC(SERIAL_TX, SERIAL_RX, 115200);        // 115200보율을 사용하는 시리얼 통신
+
+int main(){
+    while(true){
+        // 컴퓨터로부터 수신한 데이터를 컴퓨터에게 다시 보냄
+        PC.putc(PC.getc());
+    }
+}
+
+```
+### 결과 사진
+![DefaultPrint](https://github.com/HongyeongJu/MbedCode/blob/master/Chapter02_UART%ED%86%B5%EC%8B%A0/3_Eco_result.jpg)
