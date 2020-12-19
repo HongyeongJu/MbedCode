@@ -3,6 +3,7 @@
 1. Digital Out
 2. Digital In
 3. Digital In/Out
+4. Digital In/Out2
 ## 1. Digital Out
 ### 코드
 ```c++
