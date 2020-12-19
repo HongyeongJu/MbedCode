@@ -2,7 +2,7 @@
 ## 목차
 1. Digital Out
 2. Digital In
-## Digital Out
+## 1. Digital Out
 ### 코드
 ```c++
 /*
@@ -36,5 +36,5 @@
 
 ```
 ### 회로 사진
-!(DigitalOut_Circuit.jpg)
+!(https://github.com/HongyeongJu/MbedCode/blob/master/Chapter01_%EB%94%94%EC%A7%80%ED%84%B8%20%EB%8D%B0%EC%9D%B4%ED%84%B0%20%EC%9E%85%EC%B6%9C%EB%A0%A5/DigitalOut_Circuit.jpg)
 ### 결과 사진
