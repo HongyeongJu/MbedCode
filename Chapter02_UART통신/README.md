@@ -1,9 +1,9 @@
 # UART 통신
 ## 장치관리자
-![장치관리자 사진]()
+![장치관리자 사진](https://github.com/HongyeongJu/MbedCode/blob/master/Chapter02_UART%ED%86%B5%EC%8B%A0/%EC%9E%A5%EC%B9%98%EA%B4%80%EB%A6%AC%EC%9E%90.png)
 ## 목차
 1. DefaultPrint
-2.
+2. SerialClassPrint
 ## 1. DefaultPrint
 ### 코드
 ```c++
@@ -27,4 +27,31 @@ int main(){
 }
 ```
 ### 결과 사진
-![DefaultPrint](https://github.com/HongyeongJu/MbedCode/blob/master/Chapter01_%EB%94%94%EC%A7%80%ED%84%B8%20%EB%8D%B0%EC%9D%B4%ED%84%B0%20%EC%9E%85%EC%B6%9C%EB%A0%A5/1_DigitalOut_Result.jpg)
+![DefaultPrint](https://github.com/HongyeongJu/MbedCode/blob/master/Chapter02_UART%ED%86%B5%EC%8B%A0/1_DefaultPrint_result.jpg)
+
+## 2. SerialClassPrint
+### 코드
+```c++
+/*
+2020-12-20    7장_UART 시리얼 통신_통신속도 변경_107page
+회로 : X
+컴퓨터와 UART 시리얼 통신- Serial 클래스를 사용하여 통신속도 및 핀제어
+ */
+#include "mbed.h"
+
+Serial PC(SERIAL_TX, SERIAL_RX, 115200);        // 115200보율을 사용하는 시리얼 통신
+// Serial PC(D1, D0, 115200);                   // 송신핀 D1, 수신핀 D0, 115200보율을 사용하는 시리얼 통신
+
+int main(){
+    int second = 1;
+    PC.printf("Hello World!\n");       // 컴퓨터로 Hello World 출력
+
+    while(true){
+        PC.printf("second counts : %d\n", second++);
+        wait(1);            // 1초동안 대기
+    }
+}
+
+```
+### 결과 사진
+![DefaultPrint](https://github.com/HongyeongJu/MbedCode/blob/master/Chapter02_UART%ED%86%B5%EC%8B%A0/2_SerialClassPrint_result.jpg)
