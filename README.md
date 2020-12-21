@@ -20,22 +20,22 @@
 
 **7. Chapter07_적외선 센서(plan)**
 
-**8. Chapter08_PWM 신호 출력**
+**8. Chapter08_PWM 신호 출력(plan)**
 
-**9. Chapter09_인터럽트**
+**9. Chapter09_인터럽트(plan)**
 
-**10. Chapter10_타이머(wait, Timer, Ticker, Timeout)**
+**10. Chapter10_타이머(wait, Timer, Ticker, Timeout)(plan)**
 
-**8. Chapter08_피에조 부저(plan)**
+**11. Chapter11_피에조 부저(plan)**
 
-**9. Chapter09_스텝 모터(plan)**
+**12. Chapter12_스텝 모터(plan)**
 
-**10. Chapter10_FSR 센서(plan)**
+**13. Chapter13_FSR 센서(plan)**
 
-**11. Chapter11_IMU 센서(plan)**
+**14. Chapter14_IMU 센서(plan)**
 
-**12. Chapter12_플라스틱 노브 로터리 엔코더 모듈(plan)**
+**15. Chapter15_플라스틱 노브 로터리 엔코더 모듈(plan)**
 
-**13. Chapter13_7 segments(plan)**
+**16. Chapter16 segments(plan)**
 
-**14. Chapter14_ DC 모터(plan)**
+**17. Chapter17_ DC 모터(plan)**
