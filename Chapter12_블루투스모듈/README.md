@@ -80,10 +80,10 @@ int main(){
 
 ```
 ### 결과 회로 사진
-![DefaultPrint](https://github.com/HongyeongJu/MbedCode/blob/master/Chapter03_%EB%B8%94%EB%A3%A8%ED%88%AC%EC%8A%A4%EB%AA%A8%EB%93%88/2_BluetoothLED_result1_r.jpg)
-![DefaultPrint](https://github.com/HongyeongJu/MbedCode/blob/master/Chapter03_%EB%B8%94%EB%A3%A8%ED%88%AC%EC%8A%A4%EB%AA%A8%EB%93%88/2_BluetoothLED_result2_r.jpg)
+![DefaultPrint](https://github.com/HongyeongJu/MbedCode/blob/master/Chapter12_%EB%B8%94%EB%A3%A8%ED%88%AC%EC%8A%A4%EB%AA%A8%EB%93%88/2_BluetoothLED_result1_r.jpg)
+![DefaultPrint](https://github.com/HongyeongJu/MbedCode/blob/master/Chapter12_%EB%B8%94%EB%A3%A8%ED%88%AC%EC%8A%A4%EB%AA%A8%EB%93%88/2_BluetoothLED_result2_r.jpg)
 ### 결과 사진
-![DefaultPrint](https://github.com/HongyeongJu/MbedCode/blob/master/Chapter03_%EB%B8%94%EB%A3%A8%ED%88%AC%EC%8A%A4%EB%AA%A8%EB%93%88/2_BluetoothLED_result1.jpg)
-![DefaultPrint](https://github.com/HongyeongJu/MbedCode/blob/master/Chapter03_%EB%B8%94%EB%A3%A8%ED%88%AC%EC%8A%A4%EB%AA%A8%EB%93%88/2_BluetoothLED_result1_p.jpg)
-![DefaultPrint](https://github.com/HongyeongJu/MbedCode/blob/master/Chapter03_%EB%B8%94%EB%A3%A8%ED%88%AC%EC%8A%A4%EB%AA%A8%EB%93%88/2_BluetoothLED_result2.jpg)
-![DefaultPrint](https://github.com/HongyeongJu/MbedCode/blob/master/Chapter03_%EB%B8%94%EB%A3%A8%ED%88%AC%EC%8A%A4%EB%AA%A8%EB%93%88/2_BluetoothLED_result2_p.jpg)
+![DefaultPrint](https://github.com/HongyeongJu/MbedCode/blob/master/Chapter12_%EB%B8%94%EB%A3%A8%ED%88%AC%EC%8A%A4%EB%AA%A8%EB%93%88/2_BluetoothLED_result1.jpg)
+![DefaultPrint](https://github.com/HongyeongJu/MbedCode/blob/master/Chapter12_%EB%B8%94%EB%A3%A8%ED%88%AC%EC%8A%A4%EB%AA%A8%EB%93%88/2_BluetoothLED_result1_p.jpg)
+![DefaultPrint](https://github.com/HongyeongJu/MbedCode/blob/master/Chapter12_%EB%B8%94%EB%A3%A8%ED%88%AC%EC%8A%A4%EB%AA%A8%EB%93%88/2_BluetoothLED_result2.jpg)
+![DefaultPrint](https://github.com/HongyeongJu/MbedCode/blob/master/Chapter12_%EB%B8%94%EB%A3%A8%ED%88%AC%EC%8A%A4%EB%AA%A8%EB%93%88/2_BluetoothLED_result2_p.jpg)
