@@ -1,6 +1,10 @@
 # 블루투스 모듈
+## 블루투스 통신을 위한 스마트폰 어플리케이션
+구글 플레이스토어 -> Serial Bluetooth Terminal
+링크: (https://play.google.com/store/apps/details?id=de.kai_morich.serial_bluetooth_terminal)
+
 ## 스마트폰 블루투스 연결 사진
-![ConnectionPicture](https://github.com/HongyeongJu/MbedCode/blob/master/Chapter03_%EB%B8%94%EB%A3%A8%ED%88%AC%EC%8A%A4%EB%AA%A8%EB%93%88/connectionPicture.jpg)
+![ConnectionPicture](https://github.com/HongyeongJu/MbedCode/blob/master/Chapter12_%EB%B8%94%EB%A3%A8%ED%88%AC%EC%8A%A4%EB%AA%A8%EB%93%88/connectionPicture.jpg)
 
 ## 목차
 1. Bluetooth Test
