@@ -11,36 +11,40 @@
     2. SerialClassPrint
     3. Eco
     4. Eco2
-    5. UARTCallback
+    5. UARTCallback (debugging)
     6. IMU 센서 (plan)
 **3. Chapter03_블루투스 모듈 (plan)**
 
+    1. bluetooth test
 **4. Chapter04_초음파 센서(plan)**
 
-**5. Chapter05_온습도 센서(plan)**
+**5. Chapter05_적외선 센서(plan)**
 
-**6. Chapter06_적외선 센서(plan)**
+**6. Chapter06_스텝 모터(plan)**
 
-**7. Chapter07_피에조 부저(plan)**
+**7. Chapter07_FSR 센서(plan)**
 
-**8. Chapter08_스텝 모터(plan)**
+**8. Chapter08_플라스틱 노브 로터리 엔코더 모듈(plan)**
 
-**9. Chapter09_FSR 센서(plan)**
+**9. Chapter09_ DC 모터(plan)**
 
-**10. Chapter10_플라스틱 노브 로터리 엔코더 모듈(plan)**
+**10. Chapter10_서보 모터(plan)**
+------------
+# delayed
 
-**11. Chapter11_ DC 모터(plan)**
+**1. Chapter01_온습도 센서(plan)**
+
+**2. Chapter02_피에조 부저(plan)**
 
 ------------
 # cancelled
-<span style="color:red">
-**6. Chapter06_스위치 가변저항(cancelled)**
 
-**8. Chapter08_PWM 신호 출력(cancelled)**
+**1. Chapter01_스위치 가변저항(cancelled)**
 
-**9. Chapter09_인터럽트(cancelled)**
+**2. Chapter02_PWM 신호 출력(cancelled)**
 
-**10. Chapter10_타이머(wait, Timer, Ticker, Timeout)(센서 부분에 자연스럽게 추가)**
+**3. Chapter03_인터럽트(cancelled)**
 
-**16. Chapter16 segments(cancelled)**
-</span>
+**4. Chapter04_타이머(wait, Timer, Ticker, Timeout)(센서 부분에 자연스럽게 추가)**
+
+**5. Chapter05 segments(cancelled)**
