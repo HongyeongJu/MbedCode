@@ -13,9 +13,9 @@
     4. Eco2
     5. UARTCallback (debugging)
     6. IMU 센서 (plan)
-**3. Chapter03_FSR 센서(plan)**
+**3. Chapter03_FSR 센서(Finish)**
 
-**4. Chapter04_플라스틱 노브 로터리 엔코더 모듈(plan)**
+**4. Chapter04_플라스틱 노브 로터리 엔코더 모듈(going)**
 
 **5. Chapter05_CDS 조도 센서(plan)**
 
