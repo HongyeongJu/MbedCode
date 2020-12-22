@@ -15,6 +15,11 @@
     6. IMU 센서 (plan)
 **3. Chapter03_FSR 센서(Finish)**
 
+    1. FSR.cpp (외부 라이브러리)
+    2. FSR.h   (외부 라이브러리)
+    3. FSRTest
+    4. FSRLED (창작)
+
 **4. Chapter04_플라스틱 노브 로터리 엔코더 모듈(going)**
 
 **5. Chapter05_CDS 조도 센서(plan)**
