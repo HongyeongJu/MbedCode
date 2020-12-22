@@ -136,8 +136,49 @@ int main(){
 
 ```
 ### 결과 회로 사진
-![DefaultPrint](https://github.com/HongyeongJu/MbedCode/blob/master/Chapter12_%EB%B8%94%EB%A3%A8%ED%88%AC%EC%8A%A4%EB%AA%A8%EB%93%88/1_BluetoothTest_circuit.jpg)
+![DefaultPrint](https://github.com/HongyeongJu/MbedCode/blob/master/Chapter03_FSR%20%EC%84%BC%EC%84%9C/3_FSRTest_result_circuit.jpg)
 ### 결과 사진
-![DefaultPrint](https://github.com/HongyeongJu/MbedCode/blob/master/Chapter12_%EB%B8%94%EB%A3%A8%ED%88%AC%EC%8A%A4%EB%AA%A8%EB%93%88/1_BluetoothTest_result1.jpg)
-![DefaultPrint](https://github.com/HongyeongJu/MbedCode/blob/master/Chapter12_%EB%B8%94%EB%A3%A8%ED%88%AC%EC%8A%A4%EB%AA%A8%EB%93%88/1_BluetoothTest_result2.jpg)
-![DefaultPrint](https://github.com/HongyeongJu/MbedCode/blob/master/Chapter12_%EB%B8%94%EB%A3%A8%ED%88%AC%EC%8A%A4%EB%AA%A8%EB%93%88/1_BluetoothTest_result3.jpg)
+![DefaultPrint](https://github.com/HongyeongJu/MbedCode/blob/master/Chapter03_FSR%20%EC%84%BC%EC%84%9C/3_FSRTest_result_realpicture.jpg)
+![DefaultPrint](https://github.com/HongyeongJu/MbedCode/blob/master/Chapter03_FSR%20%EC%84%BC%EC%84%9C/3_FSRTest_result_%EB%88%8C%EB%A0%B8%EC%9D%84%20%EB%95%8C.jpg)
+![DefaultPrint](https://github.com/HongyeongJu/MbedCode/blob/master/Chapter03_FSR%20%EC%84%BC%EC%84%9C/3_FSRTest_result_%EB%88%8C%EB%A6%AC%EC%A7%80%20%EC%95%8A%EC%95%98%EC%9D%84%20%EB%95%8C.jpg)
+
+
+## 4.FSRLED.cpp
+### 코드
+```c++
+/*
+2020-12-22    창작
+회로 : https://os.mbed.com/components/Force-Sensitive-Resistors-FSR/
+FSR 센서의 값에 따른 LED 제어
+ */
+#include "mbed.h"
+#include "FSR.h"
+
+
+// UART2 포트, 컴퓨터 연결
+Serial pc(USBTX, USBRX);
+FSR fsr(A0, 10);        // A0 핀에 FSR센서의 AnalogIn을 받고, 저항은 10KΩ을 사용한다.
+DigitalOut LED(PA_5);   // PA_5핀에 LED 출력
+float data;             // FSR 센서 값을 저장할 변수
+int main(){
+    while(true){
+        data = fsr.readRaw();
+
+        // FSR 센서로 받은 데이터가 0.6 이상이면 눌렸다고 간주
+        if(data>0.6){
+            LED = true;
+        }else {
+            LED = false;
+        }
+        pc.printf("The raw data is %f And LED is %d\n", data, LED.read());               // 0~1사이의 소수 값
+        wait(2);
+    }
+}
+
+```
+
+### 결과 사진
+![DefaultPrint](https://github.com/HongyeongJu/MbedCode/blob/master/Chapter03_FSR%20%EC%84%BC%EC%84%9C/4_FSRLED_result_realpicture_%EB%88%8C%EB%A0%B8%EC%9D%84%20%EB%95%8C.jpg)
+![DefaultPrint](https://github.com/HongyeongJu/MbedCode/blob/master/Chapter03_FSR%20%EC%84%BC%EC%84%9C/4_FSRLED_result_%EB%88%8C%EB%A0%B8%EC%9D%84%20%EB%95%8C.jpg)
+![DefaultPrint](https://github.com/HongyeongJu/MbedCode/blob/master/Chapter03_FSR%20%EC%84%BC%EC%84%9C/4_FSRLED_result_realpicture_%EB%88%8C%EB%A6%AC%EC%A7%80%EC%95%8A%EC%95%98%EC%9D%84%20%EB%95%8C.jpg)
+![DefaultPrint](https://github.com/HongyeongJu/MbedCode/blob/master/Chapter03_FSR%20%EC%84%BC%EC%84%9C/4_FSRLED_result_%EB%88%8C%EB%A6%AC%EC%A7%80%20%EC%95%8A%EC%95%98%EC%9D%84%20%EB%95%8C.jpg)
