@@ -5,9 +5,9 @@
 ### 임포트 과정
 
 1. Compiler에서 Import 클릭
-![과정1]()
+![과정1](https://github.com/HongyeongJu/MbedCode/blob/master/Chapter04_%ED%94%8C%EB%9D%BC%EC%8A%A4%ED%8B%B1%20%EB%85%B8%EB%B8%8C%20%EB%A1%9C%ED%84%B0%EB%A6%AC%20%EC%97%94%EC%BD%94%EB%8D%94%20%EB%AA%A8%EB%93%88/%EB%9D%BC%EC%9D%B4%EB%B8%8C%EB%9F%AC%EB%A6%AC%EC%B6%94%EA%B0%80%EA%B3%BC%EC%A0%951.jpg)
 2. 검색창에 "rotary" 검색
-![과정2]()
+![과정2](https://github.com/HongyeongJu/MbedCode/blob/master/Chapter04_%ED%94%8C%EB%9D%BC%EC%8A%A4%ED%8B%B1%20%EB%85%B8%EB%B8%8C%20%EB%A1%9C%ED%84%B0%EB%A6%AC%20%EC%97%94%EC%BD%94%EB%8D%94%20%EB%AA%A8%EB%93%88/%EB%9D%BC%EC%9D%B4%EB%B8%8C%EB%9F%AC%EB%A6%AC%EC%B6%94%EA%B0%80%EA%B3%BC%EC%A0%952.jpg)
 3. mRotaryEncoder를 선택하여 Import
 
 ## 목차
@@ -53,8 +53,7 @@ int main(){
 
 ```
 ### 결과 회로 사진
-![DefaultPrint](https://github.com/HongyeongJu/MbedCode/blob/master/Chapter03_FSR%20%EC%84%BC%EC%84%9C/3_FSRTest_result_circuit.jpg)
+![DefaultPrint](https://github.com/HongyeongJu/MbedCode/blob/master/Chapter04_%ED%94%8C%EB%9D%BC%EC%8A%A4%ED%8B%B1%20%EB%85%B8%EB%B8%8C%20%EB%A1%9C%ED%84%B0%EB%A6%AC%20%EC%97%94%EC%BD%94%EB%8D%94%20%EB%AA%A8%EB%93%88/1_RotaryEncoderTest_result_circuit.jpg)
 ### 결과 사진
-![DefaultPrint](https://github.com/HongyeongJu/MbedCode/blob/master/Chapter03_FSR%20%EC%84%BC%EC%84%9C/3_FSRTest_result_realpicture.jpg)
-![DefaultPrint](https://github.com/HongyeongJu/MbedCode/blob/master/Chapter03_FSR%20%EC%84%BC%EC%84%9C/3_FSRTest_result_%EB%88%8C%EB%A0%B8%EC%9D%84%20%EB%95%8C.jpg)
-![DefaultPrint](https://github.com/HongyeongJu/MbedCode/blob/master/Chapter03_FSR%20%EC%84%BC%EC%84%9C/3_FSRTest_result_%EB%88%8C%EB%A6%AC%EC%A7%80%20%EC%95%8A%EC%95%98%EC%9D%84%20%EB%95%8C.jpg)
+![DefaultPrint](https://github.com/HongyeongJu/MbedCode/blob/master/Chapter04_%ED%94%8C%EB%9D%BC%EC%8A%A4%ED%8B%B1%20%EB%85%B8%EB%B8%8C%20%EB%A1%9C%ED%84%B0%EB%A6%AC%20%EC%97%94%EC%BD%94%EB%8D%94%20%EB%AA%A8%EB%93%88/1_RotaryEncoderTest_result_picture.jpg)
+![DefaultPrint](https://github.com/HongyeongJu/MbedCode/blob/master/Chapter04_%ED%94%8C%EB%9D%BC%EC%8A%A4%ED%8B%B1%20%EB%85%B8%EB%B8%8C%20%EB%A1%9C%ED%84%B0%EB%A6%AC%20%EC%97%94%EC%BD%94%EB%8D%94%20%EB%AA%A8%EB%93%88/1_RotaryEncoderTest_result.jpg)
