@@ -26,7 +26,9 @@ int main(){
 
 ```
 ### 결과 회로 사진
-![DefaultPrint](https://github.com/HongyeongJu/MbedCode/blob/master/Chapter04_%ED%94%8C%EB%9D%BC%EC%8A%A4%ED%8B%B1%20%EB%85%B8%EB%B8%8C%20%EB%A1%9C%ED%84%B0%EB%A6%AC%20%EC%97%94%EC%BD%94%EB%8D%94%20%EB%AA%A8%EB%93%88/1_RotaryEncoderTest_result_circuit.jpg)
+![DefaultPrint](https://github.com/HongyeongJu/MbedCode/blob/master/Chapter05_CDS%20%EC%A1%B0%EB%8F%84%20%EC%84%BC%EC%84%9C/1_CdsTest_circuit.jpg)
 ### 결과 사진
-![DefaultPrint](https://github.com/HongyeongJu/MbedCode/blob/master/Chapter04_%ED%94%8C%EB%9D%BC%EC%8A%A4%ED%8B%B1%20%EB%85%B8%EB%B8%8C%20%EB%A1%9C%ED%84%B0%EB%A6%AC%20%EC%97%94%EC%BD%94%EB%8D%94%20%EB%AA%A8%EB%93%88/1_RotaryEncoderTest_result_picture.jpg)
-![DefaultPrint](https://github.com/HongyeongJu/MbedCode/blob/master/Chapter04_%ED%94%8C%EB%9D%BC%EC%8A%A4%ED%8B%B1%20%EB%85%B8%EB%B8%8C%20%EB%A1%9C%ED%84%B0%EB%A6%AC%20%EC%97%94%EC%BD%94%EB%8D%94%20%EB%AA%A8%EB%93%88/1_RotaryEncoderTest_result.jpg)
+![DefaultPrint](https://github.com/HongyeongJu/MbedCode/blob/master/Chapter05_CDS%20%EC%A1%B0%EB%8F%84%20%EC%84%BC%EC%84%9C/1_CdsTest_result_picture.jpg)
+밝을 때
+![밝을 때 ](https://github.com/HongyeongJu/MbedCode/blob/master/Chapter05_CDS%20%EC%A1%B0%EB%8F%84%20%EC%84%BC%EC%84%9C/1_CdsTest_result(%EB%B0%9D%EC%9D%84%EB%95%8C).jpg)
+![어두울 때](https://github.com/HongyeongJu/MbedCode/blob/master/Chapter05_CDS%20%EC%A1%B0%EB%8F%84%20%EC%84%BC%EC%84%9C/1_CdsTest_result(%EC%96%B4%EB%91%90%EC%9A%B8%20%EB%95%8C).jpg)
