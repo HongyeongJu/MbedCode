@@ -41,6 +41,10 @@ int main() {
     printf("Hello World!\n");       //문자열 "Hello World!"를 Serial 통신을 통해 PC로 전송
 }
 ```
+### 결과 사진
+![DefaultPrint](https://github.com/HongyeongJu/MbedCode/blob/master/Chapter02_UART%ED%86%B5%EC%8B%A0/1_2_DefaultPrint_result(%EC%88%98%EC%A0%95%EB%90%9C%20%EC%BD%94%EB%93%9C).jpg)
+
+
 ## 2. SerialClassPrint
 ### 코드
 ```c++
