@@ -12,7 +12,8 @@
 
 ## 목차
 1. RotaryEncoderTest.cpp
-2. 2_RotaryEncoderUsingQueue.cpp
+2. RotaryEncoderUsingQueue.cpp
+3. RotaryEncoderLEDUsingPWM
 ## 1. RotaryEncoderTest.cpp
 ### 코드
 ```c++
@@ -103,6 +104,60 @@ int main(){
     while(true){
     }
 }
+
+```
+### 결과 회로 사진
+ -> 1번 회로와 같음.
+### 결과 사진
+![DefaultPrint](https://github.com/HongyeongJu/MbedCode/blob/master/Chapter04_%ED%94%8C%EB%9D%BC%EC%8A%A4%ED%8B%B1%20%EB%85%B8%EB%B8%8C%20%EB%A1%9C%ED%84%B0%EB%A6%AC%20%EC%97%94%EC%BD%94%EB%8D%94%20%EB%AA%A8%EB%93%88/2_RotaryEncoderUsingQueue_result.jpg)
+
+
+## 3_RotaryEncoderUsingQueue.cpp
+### 코드
+```c++
+/*
+2020-12-24    이벤트 큐와 PWM을 사용한 로터리 엔코더(창작)
+회로 : page 222
+RotaryEncoderLEDUsingPWM.cpp
+ */
+#include "mbed.h"
+#include "mRotaryEncoder.h"
+
+Serial pc(USBTX, USBRX);              // pc와의 시리얼 통신
+EventQueue *queue = mbed_event_queue();     // 콜백함수의 이벤트를 호출하기 위한 큐
+mRotaryEncoder encoder(D0,D1,D2);       // 로터리 인코더(S1핀, S2핀, Key핀)
+float pulse;
+int encoder_data;
+PwmOut led(PB_8);                   // DigitalOut을 사용하는 대신 PwmOut 클래스를 사용
+
+//
+void processing(){
+    if(encoder.Get() <0){
+        encoder_data = 0;
+    }
+    else if(encoder.Get() > 100){
+        encoder_data = 100;
+    }
+    else{
+        encoder_data = encoder.Get();
+    }
+    // PWM 범위 (0~1.0)
+    pulse = (float)encoder_data / 100;
+    pc.printf("encoder data : %d pulse : %f\n", encoder_data, pulse);
+}
+
+void rotate(){
+    queue->call(&processing);
+}
+
+int main(){
+    encoder.attachROT(&rotate);     // 엔코더를 회전하였을 때 호출되는 콜백함수 등록
+
+    while(true){
+        led.write(pulse);       // pwm 제어
+    }
+}
+
 
 ```
 ### 결과 회로 사진

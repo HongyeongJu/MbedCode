@@ -12,7 +12,6 @@ DigitalOut LED(PA_5);           // PA_5 핀으로 LED 제어
 EventQueue *queue = mbed_event_queue();     // 이벤트 큐
 
 mRotaryEncoder encoder(D0,D1,D2);  // 로터리 인코더(S1핀, S2핀, Key핀)
-int data;
 
 // 스위치가 눌렸을 때 LED 꺼졌다, 켜졌다. 반복
 void blink(){
