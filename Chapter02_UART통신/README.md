@@ -5,7 +5,9 @@
 1. DefaultPrint
 2. SerialClassPrint
 3. Eco
+
 ## 1. DefaultPrint
+## 1.1 책 코드
 ### 코드
 ```c++
 /*
@@ -30,6 +32,15 @@ int main(){
 ### 결과 사진
 ![DefaultPrint](https://github.com/HongyeongJu/MbedCode/blob/master/Chapter02_UART%ED%86%B5%EC%8B%A0/1_DefaultPrint_result.jpg)
 
+## 1.2 수정된 코드
+### 코드
+```c++
+#include "mbed.h"
+
+int main() {
+    printf("Hello World!\n");       //문자열 "Hello World!"를 Serial 통신을 통해 PC로 전송
+}
+```
 ## 2. SerialClassPrint
 ### 코드
 ```c++
