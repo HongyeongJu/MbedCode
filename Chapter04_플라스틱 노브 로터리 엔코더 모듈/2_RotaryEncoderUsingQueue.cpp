@@ -8,10 +8,13 @@ RotaryEncoderUsingQueue.cpp
 
 // UART2 포트, 컴퓨터 연결
 Serial pc(USBTX, USBRX);
-DigitalOut LED(PA_5);           // PA_5 핀으로 LED 제어
-EventQueue *queue = mbed_event_queue();     // 이벤트 큐
+ // PA_5 핀으로 LED 제어
+DigitalOut LED(PA_5);          
+// 이벤트 큐
+EventQueue *queue = mbed_event_queue();
 
-mRotaryEncoder encoder(D0,D1,D2);  // 로터리 인코더(S1핀, S2핀, Key핀)
+// 로터리 인코더(S1핀, S2핀, Key핀)
+mRotaryEncoder encoder(D0,D1,D2);
 
 // 스위치가 눌렸을 때 LED 꺼졌다, 켜졌다. 반복
 void blink(){
@@ -30,9 +33,12 @@ void rotate(){
 
 int main(){
     LED = false;
-    encoder.attachSW(&blink);       // 버튼이 눌렸을 때 호출되는 콜백함수 설정
-    encoder.attachROT(&rotate);     // 회전되었을 때 호출되는 콜백함수 설정
-    queue->dispatch_forever();      // 큐를
+    // 버튼이 눌렸을 때 호출되는 콜백함수 설정
+    encoder.attachSW(&blink);
+    // 회전되었을 때 호출되는 콜백함수 설정
+    encoder.attachROT(&rotate);
+    // 큐에 있는 이벤트를 시간 제약없이 실행
+    queue->dispatch_forever();
 
 
     while(true){
