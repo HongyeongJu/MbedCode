@@ -110,4 +110,4 @@ int main(){
 -> 1,2 번과 같음
 
 ### 결과 사진
-![결과 사진]()
+![결과 사진](https://github.com/HongyeongJu/MbedCode/blob/master/Chapter05_CDS%20%EC%A1%B0%EB%8F%84%20%EC%84%BC%EC%84%9C/3_CdsLEDUsingPwm_result_picture.jpg)

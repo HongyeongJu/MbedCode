@@ -26,7 +26,11 @@
     2. RotaryEncoderUsingQueue  (창작)
     3. RotaryEncoderLEDUsingPWM (창작)
 
-**5. Chapter05_CDS 조도 센서(plan)**
+**5. Chapter05_CDS 조도 센서(Finish)**
+
+    1. CdsTest
+    2. CdsLED       (창작)
+    3. CdsUsingPwm  (창작)
 
 **6. Chapter06_ DC 모터_PWM 속도 조절 포함 (plan)**
 
