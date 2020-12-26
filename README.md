@@ -47,7 +47,7 @@
 
 # 우선순위 2 그룹
 
-**9. Chapter09_Unity-mbed 연동 프로그램(plan)**
+**9. Chapter09_Unity-mbed 연동 프로그램(going)**
 
 # 우선순위 3 그룹
 
