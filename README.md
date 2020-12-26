@@ -34,11 +34,15 @@
 
 **6. Chapter06_ DC 모터_PWM 속도 조절 포함 (going)**
 
-**7. Chapter07_스텝 모터(going)**
+**7. Chapter07_스텝 모터(Finish)**
 
-    1.StepperMotorTest  
+    1. StepperMotorTest
+    2. StepperMotorButton
+    3. StepperMotorButtonUsingInterruption
 
-**8. Chapter08_서보 모터(plan)**
+**8. Chapter08_서보 모터(going)**
+
+    1. 
 
 # 우선순위 2 그룹
 

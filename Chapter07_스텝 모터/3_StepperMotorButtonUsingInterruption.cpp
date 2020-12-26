@@ -1,5 +1,5 @@
 /*
-2020-12-26    스텝모터 제어2 _ DigitalIn 클래스를 사용한 버전
+2020-12-26    스텝모터 제어2 _ InterruptIn 클래스를 사용한 버전
 회로 : 142page 참고
 3_StepperMotorButtonUsingInterruption.cpp
  */
