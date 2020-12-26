@@ -7,7 +7,7 @@
 
 ## 목차
 1. ServoMotorTest.cpp
-2. 2_ServoMotorTestUsingVariableResistance.cpp
+2. ServoMotorTestUsingVariableResistance.cpp
 
 ## 1. ServoMotorTest.cpp
 
@@ -66,7 +66,7 @@ int main()
 ### 결과 사진
 ![DefaultPrint](https://github.com/HongyeongJu/MbedCode/blob/master/Chapter08_%EC%84%9C%EB%B3%B4%20%EB%AA%A8%ED%84%B0/1_ServoMotorTest_result_picture.jpg)
 
-## 1. ServoMotorTest.cpp
+## 2. ServoMotorTestUsingVariableResistance.cpp
 
 ### 코드
 ```c++
@@ -116,6 +116,6 @@ int main()
 ```
 
 ### 결과 회로 사진
-![DefaultPrint]()
+![DefaultPrint](https://github.com/HongyeongJu/MbedCode/blob/master/Chapter08_%EC%84%9C%EB%B3%B4%20%EB%AA%A8%ED%84%B0/2_ServoMotorTestUsingVariableResistance_circuit.jpg)
 ### 결과 사진
-![DefaultPrint]()
+![DefaultPrint](https://github.com/HongyeongJu/MbedCode/blob/master/Chapter08_%EC%84%9C%EB%B3%B4%20%EB%AA%A8%ED%84%B0/2_ServoMotorTestUsingVariableResistance_picture.jpg)
