@@ -40,9 +40,10 @@
     2. StepperMotorButton
     3. StepperMotorButtonUsingInterruption
 
-**8. Chapter08_서보 모터(going)**
+**8. Chapter08_서보 모터(Finish)**
 
-    1. 
+    1. ServoMotorTest
+    2. ServoMotorTestUsingVariableResistance
 
 # 우선순위 2 그룹
 
