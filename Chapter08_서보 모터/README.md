@@ -1,9 +1,9 @@
 # Servo motor(서보 모터)
 
 ## 서보모터 회선 제어 참고
-링크 : ![](https://gent.tistory.com/85)
+링크 : !(https://gent.tistory.com/85)
 
-![서보모터 연결선]()
+![서보모터 연결선](https://github.com/HongyeongJu/MbedCode/blob/master/Chapter08_%EC%84%9C%EB%B3%B4%20%EB%AA%A8%ED%84%B0/%EC%84%9C%EB%B3%B4%EB%AA%A8%ED%84%B0%20%EC%97%B0%EA%B2%B0%EC%84%A0.jpg)
 
 ## 목차
 1. ServoMotorTest.cpp
@@ -59,6 +59,6 @@ int main()
 
 ```
 ### 결과 회로 사진
-![DefaultPrint](https://github.com/HongyeongJu/MbedCode/blob/master/Chapter07_%EC%8A%A4%ED%85%9D%20%EB%AA%A8%ED%84%B0/%EC%8A%A4%ED%85%9D%EB%AA%A8%ED%84%B0%20%ED%9A%8C%EB%A1%9C.jpg)
+![DefaultPrint](https://github.com/HongyeongJu/MbedCode/blob/master/Chapter08_%EC%84%9C%EB%B3%B4%20%EB%AA%A8%ED%84%B0/%EC%84%9C%EB%B3%B4%EB%AA%A8%ED%84%B0%20%EC%97%B0%EA%B2%B0%EC%84%A0.jpg)
 ### 결과 사진
-![DefaultPrint](https://github.com/HongyeongJu/MbedCode/blob/master/Chapter07_%EC%8A%A4%ED%85%9D%20%EB%AA%A8%ED%84%B0/1_StepperMotorTest_result_picture.jpg)
+![DefaultPrint](https://github.com/HongyeongJu/MbedCode/blob/master/Chapter08_%EC%84%9C%EB%B3%B4%20%EB%AA%A8%ED%84%B0/1_ServoMotorTest_result_picture.jpg)
