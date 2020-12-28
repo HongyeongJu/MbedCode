@@ -19,6 +19,7 @@
     2. FSR.h   (외부 라이브러리)
     3. FSRTest
     4. FSRLED (창작)
+    5. FSRTicker (동수형 창작)
 
 **4. Chapter04_플라스틱 노브 로터리 엔코더 모듈(Finish)**
 
