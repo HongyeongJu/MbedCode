@@ -9,13 +9,19 @@ FSR myFSR(A0, 10);
 Ticker myTicker;
 // FSR 센서 값을 저장할 변수
 float data;
+//이벤트 큐
+EventQueue *queue = mbed_event_queue();
 
-void Processing() {
+void print(){
     //data 변수에 FSR 값 저장
     data = myFSR.readRaw();
-
     //측정된 FSR값을 PC로 전송
     pc.printf("The raw data is %f \n", data);
+}
+
+void Processing() {
+    // 이벤트 큐를 사용하여 FSR 값을 읽고 출력
+    queue->call(&print);
 }
 
 int main()
