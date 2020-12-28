@@ -11,13 +11,17 @@ Ticker myTicker;
 float data;
 
 void Processing() {
-    myFSR.readRaw();
-    pc.printf("The raw data is %f \n", myFSR.readRaw());
+    //data 변수에 FSR 값 저장
+    data = myFSR.readRaw();
+
+    //측정된 FSR값을 PC로 전송
+    pc.printf("The raw data is %f \n", data);
 }
 
 int main()
 {
+    //myTicker 객체에 콜백 함수 (Processing) 등록 (주기 0.2초)
     myTicker.attach(&Processing, 0.2);
-  
+
     while (true);
 }
