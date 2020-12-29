@@ -43,7 +43,19 @@
 
 - Sprite 폴더에서 sky 그림을 Scene으로 드래그앤 드롭을 한다.
 
-![9]
+![9](https://github.com/HongyeongJu/MbedCode/blob/master/Chapter09_Unity-mbed%20%EC%97%B0%EB%8F%99%20%ED%94%84%EB%A1%9C%EA%B7%B8%EB%9E%A8/%EB%AF%B8%EC%82%AC%EC%9D%BC%ED%94%BC%ED%95%98%EA%B8%B0%EA%B2%8C%EC%9E%84/%EC%82%AC%EC%A7%84/9.jpg)
+
+- 드래그앤 드롭한 sky 객체를 눌러서 Inspector 창을 열고 다음과 같이 속성을 수정한다 (Position, Scale)
+
+![10](https://github.com/HongyeongJu/MbedCode/blob/master/Chapter09_Unity-mbed%20%EC%97%B0%EB%8F%99%20%ED%94%84%EB%A1%9C%EA%B7%B8%EB%9E%A8/%EB%AF%B8%EC%82%AC%EC%9D%BC%ED%94%BC%ED%95%98%EA%B8%B0%EA%B2%8C%EC%9E%84/%EC%82%AC%EC%A7%84/10.jpg)
+
+- Sprite 폴더에서 Plane sprite 화살표를 누르고 Plane_0을 선택하고 드래그앤 드롭하여 Scene으로 옮긴다.
+
+![11](https://github.com/HongyeongJu/MbedCode/blob/master/Chapter09_Unity-mbed%20%EC%97%B0%EB%8F%99%20%ED%94%84%EB%A1%9C%EA%B7%B8%EB%9E%A8/%EB%AF%B8%EC%82%AC%EC%9D%BC%ED%94%BC%ED%95%98%EA%B8%B0%EA%B2%8C%EC%9E%84/%EC%82%AC%EC%A7%84/11.jpg)
+
+- Plane 객체를 누르고 Inspector 창에서 다음과 같이 Transform 을 수정하고 Sprite Renderer에서 Order in Layer를 1로 수정한다. 또한 이름을 plane으로 수정한다.
+
+
 
 
 ### Mbed 코드
