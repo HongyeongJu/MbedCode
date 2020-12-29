@@ -55,7 +55,33 @@
 
 - Plane 객체를 누르고 Inspector 창에서 다음과 같이 Transform 을 수정하고 Sprite Renderer에서 Order in Layer를 1로 수정한다. 또한 이름을 plane으로 수정한다.
 
+![12](https://github.com/HongyeongJu/MbedCode/blob/master/Chapter09_Unity-mbed%20%EC%97%B0%EB%8F%99%20%ED%94%84%EB%A1%9C%EA%B7%B8%EB%9E%A8/%EB%AF%B8%EC%82%AC%EC%9D%BC%ED%94%BC%ED%95%98%EA%B8%B0%EA%B2%8C%EC%9E%84/%EC%82%AC%EC%A7%84/12.jpg)
 
+- Sprite 폴더에서 Gameover Sprite를 Scene으로 드래그앤 드롭한다.
+
+![13](https://github.com/HongyeongJu/MbedCode/blob/master/Chapter09_Unity-mbed%20%EC%97%B0%EB%8F%99%20%ED%94%84%EB%A1%9C%EA%B7%B8%EB%9E%A8/%EB%AF%B8%EC%82%AC%EC%9D%BC%ED%94%BC%ED%95%98%EA%B8%B0%EA%B2%8C%EC%9E%84/%EC%82%AC%EC%A7%84/13.jpg)
+
+- Inspector 창에서 다음 그림과 같이 Transform와 이름 옆에 있는 체크박스를 풀어서 화면에 보이지 않도록 만든다. 또한 Order in Layer를 1로 설정하는 것을 잊지않도록 한다.
+
+![14](https://github.com/HongyeongJu/MbedCode/blob/master/Chapter09_Unity-mbed%20%EC%97%B0%EB%8F%99%20%ED%94%84%EB%A1%9C%EA%B7%B8%EB%9E%A8/%EB%AF%B8%EC%82%AC%EC%9D%BC%ED%94%BC%ED%95%98%EA%B8%B0%EA%B2%8C%EC%9E%84/%EC%82%AC%EC%A7%84/14.jpg)
+
+- Sprite 폴더에서 missile sprite를 Scene으로 드래그앤 드롭한다.
+
+![15](https://github.com/HongyeongJu/MbedCode/blob/master/Chapter09_Unity-mbed%20%EC%97%B0%EB%8F%99%20%ED%94%84%EB%A1%9C%EA%B7%B8%EB%9E%A8/%EB%AF%B8%EC%82%AC%EC%9D%BC%ED%94%BC%ED%95%98%EA%B8%B0%EA%B2%8C%EC%9E%84/%EC%82%AC%EC%A7%84/15.jpg)
+
+- missile 객체를 클릭하여 Inspector 창에서 다음과 같이 값을 수정해준다. Transform, Order in layer.
+
+![16](https://github.com/HongyeongJu/MbedCode/blob/master/Chapter09_Unity-mbed%20%EC%97%B0%EB%8F%99%20%ED%94%84%EB%A1%9C%EA%B7%B8%EB%9E%A8/%EB%AF%B8%EC%82%AC%EC%9D%BC%ED%94%BC%ED%95%98%EA%B8%B0%EA%B2%8C%EC%9E%84/%EC%82%AC%EC%A7%84/16.jpg)
+
+- Inspector 창의 이름 아래에 Tag를 눌러서 Add Tag를 누른다.
+
+![17](https://github.com/HongyeongJu/MbedCode/blob/master/Chapter09_Unity-mbed%20%EC%97%B0%EB%8F%99%20%ED%94%84%EB%A1%9C%EA%B7%B8%EB%9E%A8/%EB%AF%B8%EC%82%AC%EC%9D%BC%ED%94%BC%ED%95%98%EA%B8%B0%EA%B2%8C%EC%9E%84/%EC%82%AC%EC%A7%84/17.jpg)
+
+- Missile 이라는 이름으로 태그를 하나 추가해준다.
+
+![18](https://github.com/HongyeongJu/MbedCode/blob/master/Chapter09_Unity-mbed%20%EC%97%B0%EB%8F%99%20%ED%94%84%EB%A1%9C%EA%B7%B8%EB%9E%A8/%EB%AF%B8%EC%82%AC%EC%9D%BC%ED%94%BC%ED%95%98%EA%B8%B0%EA%B2%8C%EC%9E%84/%EC%82%AC%EC%A7%84/18.jpg)
+
+- Hierarchy 창에서 마우스 오른쪽 버튼을 누르고 UI -> Text 버튼을 눌러 Text 객체를 생성한다.
 
 
 ### Mbed 코드
