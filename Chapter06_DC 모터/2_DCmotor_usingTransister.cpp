@@ -1,5 +1,5 @@
 /*
-2020-12-29    트랜지스터를 사용하여 DC 모터 회전 방향 제어 _p328
+2020-12-29    트랜지스터를 사용하여 DC 모터 회전 방향 제어 _(창작)
 회로 : http://wiki.vctec.co.kr/opensource/arduino/dcmotorcontrol 참고
 DCMotor_usingTransister.cpp
 

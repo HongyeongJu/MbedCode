@@ -33,7 +33,11 @@
     2. CdsLED       (창작)
     3. CdsUsingPwm  (창작)
 
-**6. Chapter06_ DC 모터_PWM 속도 조절 포함 (going)**
+**6. Chapter06_ DC 모터_PWM 속도 조절 포함 (Finish)**
+
+    1. DCmotor
+    2. DCmotorUsingTransister
+    3. DcmotorButton_usingTransister
 
 **7. Chapter07_스텝 모터(Finish)**
 
