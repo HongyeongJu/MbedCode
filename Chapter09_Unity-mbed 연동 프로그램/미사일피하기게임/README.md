@@ -103,7 +103,7 @@
 
 - Script 폴더에서 마우스 오른쪽 클릭하여 Create-> Script를 누르고 새로운 스크립트 이름을 MissileCollision으로 짓고 똑같이 Moving, SponManager 이라는 스크립트를 만든다.
 
-![24](https://github.com/HongyeongJu/MbedCode/blob/master/Chapter09_Unity-mbed%20%EC%97%B0%EB%8F%99%20%ED%94%84%EB%A1%9C%EA%B7%B8%EB%9E%A8/%EB%AF%B8%EC%82%AC%EC%9D%BC%ED%94%BC%ED%95%98%EA%B8%B0%EA%B2%8C%EC%9E%84/%EC%82%AC%EC%A7%84/23.jpg)
+![24](https://github.com/HongyeongJu/MbedCode/blob/master/Chapter09_Unity-mbed%20%EC%97%B0%EB%8F%99%20%ED%94%84%EB%A1%9C%EA%B7%B8%EB%9E%A8/%EB%AF%B8%EC%82%AC%EC%9D%BC%ED%94%BC%ED%95%98%EA%B8%B0%EA%B2%8C%EC%9E%84/%EC%82%AC%EC%A7%84/24.jpg)
 
 - 각각 스크립트 더블 클릭하고 비주얼 스튜디오를 연다음 아래 코드를 붙여넣는다.
 
@@ -365,6 +365,33 @@ public class SponManager : MonoBehaviour
 }
 
 ```
+
+![25](https://github.com/HongyeongJu/MbedCode/blob/master/Chapter09_Unity-mbed%20%EC%97%B0%EB%8F%99%20%ED%94%84%EB%A1%9C%EA%B7%B8%EB%9E%A8/%EB%AF%B8%EC%82%AC%EC%9D%BC%ED%94%BC%ED%95%98%EA%B8%B0%EA%B2%8C%EC%9E%84/%EC%82%AC%EC%A7%84/25.jpg)
+
+- 복사를 하고나고 저장을 하면 다음 그림과 같이 Moving.cs 파일에서 System.IO.Ports가 못찾는다고 뜰 것이다. 이를 해결하기 위해 다음과 같은 과정을 진행한다.
+
+![26](https://github.com/HongyeongJu/MbedCode/blob/master/Chapter09_Unity-mbed%20%EC%97%B0%EB%8F%99%20%ED%94%84%EB%A1%9C%EA%B7%B8%EB%9E%A8/%EB%AF%B8%EC%82%AC%EC%9D%BC%ED%94%BC%ED%95%98%EA%B8%B0%EA%B2%8C%EC%9E%84/%EC%82%AC%EC%A7%84/26.jpg)
+
+- Unity 메뉴에서 File -> Build Seettings를 클릭한다.
+
+![27](https://github.com/HongyeongJu/MbedCode/blob/master/Chapter09_Unity-mbed%20%EC%97%B0%EB%8F%99%20%ED%94%84%EB%A1%9C%EA%B7%B8%EB%9E%A8/%EB%AF%B8%EC%82%AC%EC%9D%BC%ED%94%BC%ED%95%98%EA%B8%B0%EA%B2%8C%EC%9E%84/%EC%82%AC%EC%A7%84/27.jpg)
+
+- Build Settings가 뜨면 Player Settings 버튼을 클릭한다.
+
+![28](https://github.com/HongyeongJu/MbedCode/blob/master/Chapter09_Unity-mbed%20%EC%97%B0%EB%8F%99%20%ED%94%84%EB%A1%9C%EA%B7%B8%EB%9E%A8/%EB%AF%B8%EC%82%AC%EC%9D%BC%ED%94%BC%ED%95%98%EA%B8%B0%EA%B2%8C%EC%9E%84/%EC%82%AC%EC%A7%84/28.jpg)
+
+- Project Settings에서 왼쪽 Player 탭을 선택하고 거기서 Other Settings를 눌러서 확장시킨다.
+
+![29](https://github.com/HongyeongJu/MbedCode/blob/master/Chapter09_Unity-mbed%20%EC%97%B0%EB%8F%99%20%ED%94%84%EB%A1%9C%EA%B7%B8%EB%9E%A8/%EB%AF%B8%EC%82%AC%EC%9D%BC%ED%94%BC%ED%95%98%EA%B8%B0%EA%B2%8C%EC%9E%84/%EC%82%AC%EC%A7%84/29.jpg)
+
+- Configuration 탭에서 Api Compatibility Level을 .NET 4.x으로 변경한다. 그러면 코드를 복사하는 과정에서 생긴 버그를 해결할 수가 있다.
+
+![30](https://github.com/HongyeongJu/MbedCode/blob/master/Chapter09_Unity-mbed%20%EC%97%B0%EB%8F%99%20%ED%94%84%EB%A1%9C%EA%B7%B8%EB%9E%A8/%EB%AF%B8%EC%82%AC%EC%9D%BC%ED%94%BC%ED%95%98%EA%B8%B0%EA%B2%8C%EC%9E%84/%EC%82%AC%EC%A7%84/30.jpg)
+
+- Build Settings 창에서 Add Open Scenes 버튼을 클릭하여 현재 씬을 프로젝트에 추가한다. 그리고 닫기버튼을 누른다.
+
+
+
 
 ### Mbed 코드
 ```c++
