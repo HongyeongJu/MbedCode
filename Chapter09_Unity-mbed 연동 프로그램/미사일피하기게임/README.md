@@ -83,6 +83,23 @@
 
 - Hierarchy 창에서 마우스 오른쪽 버튼을 누르고 UI -> Text 버튼을 눌러 Text 객체를 생성한다.
 
+![19](https://github.com/HongyeongJu/MbedCode/blob/master/Chapter09_Unity-mbed%20%EC%97%B0%EB%8F%99%20%ED%94%84%EB%A1%9C%EA%B7%B8%EB%9E%A8/%EB%AF%B8%EC%82%AC%EC%9D%BC%ED%94%BC%ED%95%98%EA%B8%B0%EA%B2%8C%EC%9E%84/%EC%82%AC%EC%A7%84/19.jpg)
+
+- Text 객체의 Inspector창에서 Rect Transform안에 있는 anchor Preset 버튼을 클릭한다.
+
+![20](https://github.com/HongyeongJu/MbedCode/blob/master/Chapter09_Unity-mbed%20%EC%97%B0%EB%8F%99%20%ED%94%84%EB%A1%9C%EA%B7%B8%EB%9E%A8/%EB%AF%B8%EC%82%AC%EC%9D%BC%ED%94%BC%ED%95%98%EA%B8%B0%EA%B2%8C%EC%9E%84/%EC%82%AC%EC%A7%84/20.jpg)
+
+- Ctrl + Alt 버튼을 누르면서 원하는 anchor preset 위치를 선택한다. 우리는 top과 right 쪽을 선택할 것이다.
+
+![21](https://github.com/HongyeongJu/MbedCode/blob/master/Chapter09_Unity-mbed%20%EC%97%B0%EB%8F%99%20%ED%94%84%EB%A1%9C%EA%B7%B8%EB%9E%A8/%EB%AF%B8%EC%82%AC%EC%9D%BC%ED%94%BC%ED%95%98%EA%B8%B0%EA%B2%8C%EC%9E%84/%EC%82%AC%EC%A7%84/21.jpg)
+
+- Text Inspector 창에서 다음과 같이 수치를 변경한다. 또한 Text 속성에서 Score: 0 로 바꾸고 Font Size :22, bold 체로 설정한다.
+
+![22](https://github.com/HongyeongJu/MbedCode/blob/master/Chapter09_Unity-mbed%20%EC%97%B0%EB%8F%99%20%ED%94%84%EB%A1%9C%EA%B7%B8%EB%9E%A8/%EB%AF%B8%EC%82%AC%EC%9D%BC%ED%94%BC%ED%95%98%EA%B8%B0%EA%B2%8C%EC%9E%84/%EC%82%AC%EC%A7%84/22.jpg)
+
+- Asset 폴더에서 Script 폴더와 Prefab 폴더를 생성한다.
+
+
 
 ### Mbed 코드
 ```c++
