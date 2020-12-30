@@ -390,8 +390,96 @@ public class SponManager : MonoBehaviour
 
 - Build Settings 창에서 Add Open Scenes 버튼을 클릭하여 현재 씬을 프로젝트에 추가한다. 그리고 닫기버튼을 누른다.
 
+![31](https://github.com/HongyeongJu/MbedCode/blob/master/Chapter09_Unity-mbed%20%EC%97%B0%EB%8F%99%20%ED%94%84%EB%A1%9C%EA%B7%B8%EB%9E%A8/%EB%AF%B8%EC%82%AC%EC%9D%BC%ED%94%BC%ED%95%98%EA%B8%B0%EA%B2%8C%EC%9E%84/%EC%82%AC%EC%A7%84/31.jpg)
+
+- Hierachy 창에서 plane 객체를 클릭한다. 또 Script 폴더에서 Moving 스크립트를 Inspector 창으로 드래그앤 드롭한다.
+
+![32](https://github.com/HongyeongJu/MbedCode/blob/master/Chapter09_Unity-mbed%20%EC%97%B0%EB%8F%99%20%ED%94%84%EB%A1%9C%EA%B7%B8%EB%9E%A8/%EB%AF%B8%EC%82%AC%EC%9D%BC%ED%94%BC%ED%95%98%EA%B8%B0%EA%B2%8C%EC%9E%84/%EC%82%AC%EC%A7%84/32.jpg)
+
+- 충돌 처리를 위해서 Plane 의 Inspector 창에서 Add Components 버튼을 누르고 Box Collider 2D를 추가한다.
+
+![33](https://github.com/HongyeongJu/MbedCode/blob/master/Chapter09_Unity-mbed%20%EC%97%B0%EB%8F%99%20%ED%94%84%EB%A1%9C%EA%B7%B8%EB%9E%A8/%EB%AF%B8%EC%82%AC%EC%9D%BC%ED%94%BC%ED%95%98%EA%B8%B0%EA%B2%8C%EC%9E%84/%EC%82%AC%EC%A7%84/33.jpg)
+
+- plane 객체의 Moving 스크립트에서 Game Over Object 객체를 지정해주어야된다. Hierachy 창에서 GameOver객체를 드래그앤 드롭하여 GameOverObject로 끌고온다.
+
+![34](https://github.com/HongyeongJu/MbedCode/blob/master/Chapter09_Unity-mbed%20%EC%97%B0%EB%8F%99%20%ED%94%84%EB%A1%9C%EA%B7%B8%EB%9E%A8/%EB%AF%B8%EC%82%AC%EC%9D%BC%ED%94%BC%ED%95%98%EA%B8%B0%EA%B2%8C%EC%9E%84/%EC%82%AC%EC%A7%84/34.jpg)
+
+- Hierarchy 창에서 마우스 오른쪽 버튼을 클릭하여 Create Empty 버튼을 클릭한다.
+
+![35](https://github.com/HongyeongJu/MbedCode/blob/master/Chapter09_Unity-mbed%20%EC%97%B0%EB%8F%99%20%ED%94%84%EB%A1%9C%EA%B7%B8%EB%9E%A8/%EB%AF%B8%EC%82%AC%EC%9D%BC%ED%94%BC%ED%95%98%EA%B8%B0%EA%B2%8C%EC%9E%84/%EC%82%AC%EC%A7%84/35.jpg)
+
+- 생성된 GameObject를 Colision으로 이름을 바꾼다.
+
+![36](https://github.com/HongyeongJu/MbedCode/blob/master/Chapter09_Unity-mbed%20%EC%97%B0%EB%8F%99%20%ED%94%84%EB%A1%9C%EA%B7%B8%EB%9E%A8/%EB%AF%B8%EC%82%AC%EC%9D%BC%ED%94%BC%ED%95%98%EA%B8%B0%EA%B2%8C%EC%9E%84/%EC%82%AC%EC%A7%84/36.jpg)
+
+- Collision 객체에서 Add Component를 눌러서 Box Collider 2D와 Rigidbody 2D를 추가하고 Script 폴더에서 Missile Collision 스크립트를 드래그앤 드롭하여 추가한다.
+- 또한 위의 그림과 같이 변수를 변경해준다.
+
+![37](https://github.com/HongyeongJu/MbedCode/blob/master/Chapter09_Unity-mbed%20%EC%97%B0%EB%8F%99%20%ED%94%84%EB%A1%9C%EA%B7%B8%EB%9E%A8/%EB%AF%B8%EC%82%AC%EC%9D%BC%ED%94%BC%ED%95%98%EA%B8%B0%EA%B2%8C%EC%9E%84/%EC%82%AC%EC%A7%84/37.jpg)
+
+- Missile Collision 스크립트에서 Text 객체를 선택해주어야된다. Hierarchy 창에서 Text 객체를 찾아서 드래그앤 드롭하여 선택해준다.
+
+![38](https://github.com/HongyeongJu/MbedCode/blob/master/Chapter09_Unity-mbed%20%EC%97%B0%EB%8F%99%20%ED%94%84%EB%A1%9C%EA%B7%B8%EB%9E%A8/%EB%AF%B8%EC%82%AC%EC%9D%BC%ED%94%BC%ED%95%98%EA%B8%B0%EA%B2%8C%EC%9E%84/%EC%82%AC%EC%A7%84/38.jpg)
+
+- Hierarchy 창에서 Create-> Empty Object 버튼을 눌러서 새로운 GameObject를 만들고 그것의 이름을 System으로 바꾼다.
+
+![39](https://github.com/HongyeongJu/MbedCode/blob/master/Chapter09_Unity-mbed%20%EC%97%B0%EB%8F%99%20%ED%94%84%EB%A1%9C%EA%B7%B8%EB%9E%A8/%EB%AF%B8%EC%82%AC%EC%9D%BC%ED%94%BC%ED%95%98%EA%B8%B0%EA%B2%8C%EC%9E%84/%EC%82%AC%EC%A7%84/39.jpg)
+
+- Script 폴더에서 SponManager 스크립트를 System 객체에 드래그앤 드롭하여 추가해준다.
+
+![40](https://github.com/HongyeongJu/MbedCode/blob/master/Chapter09_Unity-mbed%20%EC%97%B0%EB%8F%99%20%ED%94%84%EB%A1%9C%EA%B7%B8%EB%9E%A8/%EB%AF%B8%EC%82%AC%EC%9D%BC%ED%94%BC%ED%95%98%EA%B8%B0%EA%B2%8C%EC%9E%84/%EC%82%AC%EC%A7%84/40.jpg)
+
+- Spon Manager에서 Enable Spawn 체크박스를 체크해주고 Missile 은 Hierarchy창에서 missile 객체를 찾아서 선택해준다.
+
+![41](https://github.com/HongyeongJu/MbedCode/blob/master/Chapter09_Unity-mbed%20%EC%97%B0%EB%8F%99%20%ED%94%84%EB%A1%9C%EA%B7%B8%EB%9E%A8/%EB%AF%B8%EC%82%AC%EC%9D%BC%ED%94%BC%ED%95%98%EA%B8%B0%EA%B2%8C%EC%9E%84/%EC%82%AC%EC%A7%84/41.jpg)
+
+- Mbed와 컴퓨터랑 연결하고 윈도우에서 장치관리자를 열고 PORT번호를 확인한다. 현재 COM3에 물려있는 것을 확인할 수가 있다.
+
+![42](https://github.com/HongyeongJu/MbedCode/blob/master/Chapter09_Unity-mbed%20%EC%97%B0%EB%8F%99%20%ED%94%84%EB%A1%9C%EA%B7%B8%EB%9E%A8/%EB%AF%B8%EC%82%AC%EC%9D%BC%ED%94%BC%ED%95%98%EA%B8%B0%EA%B2%8C%EC%9E%84/%EC%82%AC%EC%A7%84/42.jpg)
+
+- Moving 스크립트를 열고 현재 상황에 맞는 PORT번호 스크립트를 변경해준다.
+
+![43](https://github.com/HongyeongJu/MbedCode/blob/master/Chapter09_Unity-mbed%20%EC%97%B0%EB%8F%99%20%ED%94%84%EB%A1%9C%EA%B7%B8%EB%9E%A8/%EB%AF%B8%EC%82%AC%EC%9D%BC%ED%94%BC%ED%95%98%EA%B8%B0%EA%B2%8C%EC%9E%84/%EC%82%AC%EC%A7%84/43.jpg)
+
+- hierachy 창에서 missile 객체를 찾고 missile 객체에 Rigidbody 2D와 Box collider 2D를 추가한다. 또한 위 그림처럼 Rigidbody 2D의 변수를 바꿔준다. "Gravity Scale: 0"을 잊지 말자.
+
+![44](https://github.com/HongyeongJu/MbedCode/blob/master/Chapter09_Unity-mbed%20%EC%97%B0%EB%8F%99%20%ED%94%84%EB%A1%9C%EA%B7%B8%EB%9E%A8/%EB%AF%B8%EC%82%AC%EC%9D%BC%ED%94%BC%ED%95%98%EA%B8%B0%EA%B2%8C%EC%9E%84/%EC%82%AC%EC%A7%84/44.jpg)
+
+- Add Component를 눌러서 new script를 찾고 script의 이름을 MissileMoving으로 짓는다.
+
+![45](https://github.com/HongyeongJu/MbedCode/blob/master/Chapter09_Unity-mbed%20%EC%97%B0%EB%8F%99%20%ED%94%84%EB%A1%9C%EA%B7%B8%EB%9E%A8/%EB%AF%B8%EC%82%AC%EC%9D%BC%ED%94%BC%ED%95%98%EA%B8%B0%EA%B2%8C%EC%9E%84/%EC%82%AC%EC%A7%84/45.jpg)
+
+- Hierachy 창에서 MissileMoving 스크립트를 찾고 비주얼스튜디오를 열어서 다음의 코드를 추가해준다.
+
+### MissileMoving.cs
+```cs
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+
+public class missileMoving : MonoBehaviour
+{
+
+    public int speed = 2;
+    // Start is called before the first frame update
+    void Start()
+    {
+
+    }
 
 
+	// Update is called once per frame
+	void Update()
+    {
+        Vector3 direction = new Vector3(0, -1, 0);
+        transform.Translate(direction * Time.deltaTime * speed, Space.World );
+    }
+}
+
+
+```
+
+- 또한 아래의 Mbed 코드를 Mbed에 넣고 Mbed와 Unity 사이 연동을 해준다.
 
 ### Mbed 코드
 ```c++
