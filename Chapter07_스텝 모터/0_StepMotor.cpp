@@ -1,42 +1,40 @@
 #include "mbed.h"
 
+//DigitalOut으로 4개의 출력핀 객체 생성
 DigitalOut _A0(D0), _A1(D1), _A2(D2), _A3(D3);
 
+//Ticker 객체 생성
 Ticker myTicker;
 
 unsigned int step = 0;
-//회전 함수
+//회전 함수 (1-2상 여자 방식)
 void Rotate(int current_step)
 {
 	switch (current_step) {
-	case 1: {
+	case 1:
 		_A0 = 0;
 		_A1 = 0;
 		_A2 = 0;
 		_A3 = 1;
-	}
-		  break;
-	case 2: {
+		break;
+	case 2:
 		_A0 = 0;
 		_A1 = 0;
 		_A2 = 1;
 		_A3 = 1;
-	}
-		  break;
-	case 3: {
+		break;
+	case 3:
 		_A0 = 0;
 		_A1 = 0;
 		_A2 = 1;
 		_A3 = 0;
-	}
-		  break;
-	case 4: {
+		break;
+	case 4:
 		_A0 = 0;
 		_A1 = 1;
 		_A2 = 1;
 		_A3 = 0;
-	}
-		  break;
+		break;
 	case 5: {
 		_A0 = 0;
 		_A1 = 1;
@@ -44,33 +42,30 @@ void Rotate(int current_step)
 		_A3 = 0;
 	}
 		  break;
-	case 6: {
+	case 6:
 		_A0 = 1;
 		_A1 = 1;
 		_A2 = 0;
 		_A3 = 0;
-	}
-		  break;
-	case 7: {
+		break;
+	case 7:
 		_A0 = 1;
 		_A1 = 0;
 		_A2 = 0;
 		_A3 = 0;
-	}
-		  break;
-	case 0: {
+		break;
+	case 0:
 		_A0 = 1;
 		_A1 = 0;
 		_A2 = 0;
 		_A3 = 1;
-	}
-		  break;
+		break;
 	}
 
 }
 
 //콜백 함수
-void Processing() 
+void Processing()
 {
 	//회전함수 호출
 	Rotate(step);
@@ -86,6 +81,6 @@ int main()
 	myTicker.attach(&Processing, 0.1);
 
 	while (1)
-	{		
+	{
 	}
 }
