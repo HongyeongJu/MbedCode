@@ -11,12 +11,15 @@ AnalogIn IRSensor(A0);
 int main()
 {
   while(1){
-    // 입력 전압
-    float voltage =  sensor.read() * 3.3;
-    // 거리 계산
-    float distance = 27.86 * pow((double)voltage, -1.15);
+    // IRSensor로부터 데이터를 받는다.
+    int data = IRSensor.read();
 
-    printf("Read = %4.2f, Distance =  %.1f Cm\n", voltage, distance);
+    // 만약 데이터가 0(LOW)이면 바로 앞에 물체가 있음을 검출한다.
+    if(data == 0){
+        printf("Detected!\n");
+    }else {
+        printf("Undetected!\n");
+    }
     wait(1);
   }
 }
