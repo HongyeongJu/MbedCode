@@ -62,7 +62,8 @@
 
 **10. Chapter10_온습도 센서(going)**
 
-    1.
+    1. DHT11
+    2. DHT11UsingTicker
 
 **11. Chapter11_IMU 센서(plan)(UART)**
 
