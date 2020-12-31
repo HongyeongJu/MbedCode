@@ -74,7 +74,10 @@
     1. bluetooth test
     2. bluetoothLED
 
-**13. Chapter13_적외선 센서(plan)**
+**13. Chapter13_적외선 센서(going)**
+
+    1. IRSensor
+    2. IRSensorLED
 
 **14. Chapter14_초음파 센서(plan)**
 
