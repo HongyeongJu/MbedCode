@@ -60,7 +60,7 @@
 
 # 우선순위 3 그룹
 
-**10. Chapter10_온습도 센서(going)**
+**10. Chapter10_온습도 센서(Finish)**
 
     1. DHT11
     2. DHT11UsingTicker
@@ -83,7 +83,7 @@
 
     1. Ultrasound
     2. UltrasoundLED
-    
+
 ------------
 # cancelled
 
