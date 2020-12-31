@@ -30,26 +30,94 @@
 
 - Hierachy 창에서 마우스 오른쪽 클릭하여 Light-> Point Light 객체를 생성한다.
 
--[7]()
+![7]()
 
 - 생성된 Point Light를 클릭하여 Inspector 창에서 위의 그림과 같이 변수를 변경한다.
 
--[8]()
+![8]()
 
 - Assets 창에서 마우스 오른쪽 버튼을 누르고 Create-> C# script를 눌러서 새로운 스크립트를 생성한다. 이 새로운 스크립트의 이름은 "lightControl"으로 변경한다.
 
--[9]()
+![9]()
 
-- 새로 생성된 스크립트를 두번 클릭하여
-## 프로그램 사진
+- 새로 생성된 스크립트를 두번 하여 비주얼 스튜디오를 열고 다음의 코드를 복사 붙여넣기한다.
 
-![켜져있을 때](https://github.com/HongyeongJu/MbedCode/blob/master/Chapter09_Unity-mbed%20%EC%97%B0%EB%8F%99%20%ED%94%84%EB%A1%9C%EA%B7%B8%EB%9E%A8/%EB%B6%88%EC%BC%9C%EA%B3%A0%EB%81%84%EB%8A%94%ED%94%84%EB%A1%9C%EA%B7%B8%EB%9E%A8/%EC%BC%9C%EC%A0%B8%EC%9E%88%EC%9D%84%EB%95%8C.jpg)
+### lightControl.cs
+```cs
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+using System.IO.Ports;
+using System;
 
-- 불이 켜졌을 때
+public class lightControl : MonoBehaviour
+{
+    // 시리얼 통신 객체
+    SerialPort m_SerialPort = new SerialPort("COM3", 9600, Parity.None, 8, StopBits.One);
 
-![꺼져있을 떄](https://github.com/HongyeongJu/MbedCode/blob/master/Chapter09_Unity-mbed%20%EC%97%B0%EB%8F%99%20%ED%94%84%EB%A1%9C%EA%B7%B8%EB%9E%A8/%EB%B6%88%EC%BC%9C%EA%B3%A0%EB%81%84%EB%8A%94%ED%94%84%EB%A1%9C%EA%B7%B8%EB%9E%A8/%EA%BA%BC%EC%A0%B8%EC%9E%88%EC%9D%84%20%EB%95%8C.jpg)
+    // 불을 키는지 안키는지 관련한 스위치 변수
+    bool isLight = true;
+    // Start is called before the first frame update
+    void Start()
+    {
+        // 시리얼 포트 시작
+        m_SerialPort.Open();
+    }
 
-- 불이 꺼졌을 때
+    // ms 단위로 딜레이를 시키는 함수
+    private static DateTime Delay(int MS)
+    {
+        DateTime ThisMoment = DateTime.Now;
+        TimeSpan duration = new TimeSpan(0, 0, 0, 0, MS);
+        DateTime AfterWards = ThisMoment.Add(duration);
+
+        while (AfterWards >= ThisMoment)
+        {
+            ThisMoment = DateTime.Now;
+        }
+        return DateTime.Now;
+    }
+
+    // Update is called once per frame
+    void Update()
+    {
+        // 시리얼 통신을 통해 Mbed로부터 데이터를 받는다.
+		if (m_SerialPort.IsOpen)
+		{
+            String temp = m_SerialPort.ReadExisting();
+            // mbed로부터 받은 데이터가 빈 데이터가 아리면 스위치 반전
+            if (temp != "")
+			{
+                isLight = !isLight;
+                GetComponent<Light>().enabled = isLight;
+                Debug.Log(isLight);
+                Delay(1000);
+                m_SerialPort.ReadExisting();
+            }
+        }
+    }
+
+	private void OnDestroy()
+	{
+        // 시리얼 포트 종료
+        m_SerialPort.Close();
+	}
+}
+```
+
+![10]()
+
+- 시리얼 통신을 하는 클래스를 사용하기 위해 Unity 좌측 상단 메뉴에서 File-> Build Settings-> Player settings을 누르고 player 탭을 선택한다.
+
+![11]()
+
+- Player탭에서 Api Compatibility Level 을 .NET 4.x으로 바꿔준다.
+
+![12]()
+
+- lightControl 스크립트를 Point Light 객체의 Inspector 창으로 드래그앤 드롭을 한다.
+
+- Mbed에 다음의 코드를 컴파일하여 플레이버튼을 누른다.
 
 ### MbedUnity1.cpp
 ```c++
@@ -77,3 +145,15 @@ int main(){
 }
 
 ```
+
+
+
+## 프로그램 사진
+
+![켜져있을 때](https://github.com/HongyeongJu/MbedCode/blob/master/Chapter09_Unity-mbed%20%EC%97%B0%EB%8F%99%20%ED%94%84%EB%A1%9C%EA%B7%B8%EB%9E%A8/%EB%B6%88%EC%BC%9C%EA%B3%A0%EB%81%84%EB%8A%94%ED%94%84%EB%A1%9C%EA%B7%B8%EB%9E%A8/%EC%BC%9C%EC%A0%B8%EC%9E%88%EC%9D%84%EB%95%8C.jpg)
+
+- 불이 켜졌을 때
+
+![꺼져있을 떄](https://github.com/HongyeongJu/MbedCode/blob/master/Chapter09_Unity-mbed%20%EC%97%B0%EB%8F%99%20%ED%94%84%EB%A1%9C%EA%B7%B8%EB%9E%A8/%EB%B6%88%EC%BC%9C%EA%B3%A0%EB%81%84%EB%8A%94%ED%94%84%EB%A1%9C%EA%B7%B8%EB%9E%A8/%EA%BA%BC%EC%A0%B8%EC%9E%88%EC%9D%84%20%EB%95%8C.jpg)
+
+- 불이 꺼졌을 때
