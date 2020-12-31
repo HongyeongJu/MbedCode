@@ -44,6 +44,7 @@
 
 ### lightControl.cs
 ```cs
+
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -55,27 +56,11 @@ public class lightControl : MonoBehaviour
     // 시리얼 통신 객체
     SerialPort m_SerialPort = new SerialPort("COM3", 9600, Parity.None, 8, StopBits.One);
 
-    // 불을 키는지 안키는지 관련한 스위치 변수
-    bool isLight = true;
     // Start is called before the first frame update
     void Start()
     {
         // 시리얼 포트 시작
         m_SerialPort.Open();
-    }
-
-    // ms 단위로 딜레이를 시키는 함수
-    private static DateTime Delay(int MS)
-    {
-        DateTime ThisMoment = DateTime.Now;
-        TimeSpan duration = new TimeSpan(0, 0, 0, 0, MS);
-        DateTime AfterWards = ThisMoment.Add(duration);
-
-        while (AfterWards >= ThisMoment)
-        {
-            ThisMoment = DateTime.Now;
-        }
-        return DateTime.Now;
     }
 
     // Update is called once per frame
@@ -85,14 +70,19 @@ public class lightControl : MonoBehaviour
 		if (m_SerialPort.IsOpen)
 		{
             String temp = m_SerialPort.ReadExisting();
-            // mbed로부터 받은 데이터가 빈 데이터가 아리면 스위치 반전
+            // mbed로부터 받은 데이터가 비었는지 검사
             if (temp != "")
 			{
-                isLight = !isLight;
-                GetComponent<Light>().enabled = isLight;
-                Debug.Log(isLight);
-                Delay(1000);
-                m_SerialPort.ReadExisting();
+                // Mbed로부터 1을 받으면(조도센서가 어두워졌을 때) Light On
+                if(temp[0] == '1')
+				{
+                    GetComponent<Light>().enabled = true;
+				}
+                // Mbed로부터 0을 받으면(조도센서가 밝아졌을 때) Light Off
+				else if(temp[0] == '0')
+				{
+                    GetComponent<Light>().enabled = false;
+				}
             }
         }
     }
@@ -103,6 +93,8 @@ public class lightControl : MonoBehaviour
         m_SerialPort.Close();
 	}
 }
+
+
 ```
 
 ![10](https://github.com/HongyeongJu/MbedCode/blob/master/Chapter09_Unity-mbed%20%EC%97%B0%EB%8F%99%20%ED%94%84%EB%A1%9C%EA%B7%B8%EB%9E%A8/%EB%B6%88%EC%BC%9C%EA%B3%A0%EB%81%84%EB%8A%94%ED%94%84%EB%A1%9C%EA%B7%B8%EB%9E%A8/%EC%82%AC%EC%A7%84/10.jpg)
