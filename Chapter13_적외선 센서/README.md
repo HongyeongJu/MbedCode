@@ -38,11 +38,11 @@ int main()
 
 ### 결과 사진
 
-![]()
+![](https://github.com/HongyeongJu/MbedCode/blob/master/Chapter13_%EC%A0%81%EC%99%B8%EC%84%A0%20%EC%84%BC%EC%84%9C/1_IRSensor_result.jpg)
 
 ### 결과 회로 사진
 
-![]()
+![](https://github.com/HongyeongJu/MbedCode/blob/master/Chapter13_%EC%A0%81%EC%99%B8%EC%84%A0%20%EC%84%BC%EC%84%9C/1_IRSensor_circuit.jpg)
 
 ## 2. IRSensorLED
 
@@ -114,9 +114,9 @@ int main()
 
 ### 결과 사진
 
-![]()
+![](https://github.com/HongyeongJu/MbedCode/blob/master/Chapter13_%EC%A0%81%EC%99%B8%EC%84%A0%20%EC%84%BC%EC%84%9C/2_IRSensorDCMotor_realpicture.jpg)
 
-![]()
+![](https://github.com/HongyeongJu/MbedCode/blob/master/Chapter13_%EC%A0%81%EC%99%B8%EC%84%A0%20%EC%84%BC%EC%84%9C/2_IRSensorDCMotor_result.jpg)
 
 ### 결과 회로 사진
 
