@@ -8,7 +8,7 @@
 #include "DHT.h"
 
 //DHT 11센서를 사용한다.
-DHT dht(D2, DHT11);
+DHT dht(D0, DHT11);
 
 int main(){
   // 센서가 안정화 될때까지 기다린다.
@@ -24,7 +24,7 @@ int main(){
       // 습도 측정
       float humidity = dht.ReadHumidity();
 
-      printf("Temperature : $.2f, Humidity : %.2f\n", temperature, humidity);
+      printf("Temperature : %.2f, Humidity : %.2f\n", temperature, humidity);
     }
     else{   // 데이터를 읽는 도중 오류가 발생함
       printf(" -- Error Occurred ! : %d\n", data);

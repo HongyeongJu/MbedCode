@@ -1,5 +1,5 @@
 /*
-2020-12-31   온습도 센서Ticker_ 245page
+2020-12-31   온습도 센서Ticker_ (창작)
 회로 : 240page
 Ticker를 사용하여 온습도 센서 제어
  */
@@ -8,7 +8,7 @@ Ticker를 사용하여 온습도 센서 제어
 #include "DHT.h"
 
 //DHT 11센서를 사용한다.
-DHT dht(D2, DHT11);
+DHT dht(D0, DHT11);
 // Ticker 객체 생성
 Ticker myTicker;
 
@@ -23,7 +23,7 @@ void processing(){
     // 습도 측정
     float humidity = dht.ReadHumidity();
 
-    printf("Temperature : $.2f, Humidity : %.2f\n", temperature, humidity);
+    printf("Temperature : %.2f, Humidity : %.2f\n", temperature, humidity);
   }
   else{   // 데이터를 읽는 도중 오류가 발생함
     printf(" -- Error Occurred ! : %d\n", data);

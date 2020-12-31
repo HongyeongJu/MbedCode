@@ -17,8 +17,6 @@
 
 - 라이브러리 탭에서 DHT를 누르고 다음과 같은 라이브러리를 임포트를 한다.
 
-![3]()
-
 ## 목차
 1. DHT11.cpp
 2. DHT11UsingTicker.cpp
@@ -52,7 +50,7 @@ int main(){
       // 습도 측정
       float humidity = dht.ReadHumidity();
 
-      printf("Temperature : $.2f, Humidity : %.2f\n", temperature, humidity);
+      printf("Temperature : %.2f, Humidity : %.2f\n", temperature, humidity);
     }
     else{   // 데이터를 읽는 도중 오류가 발생함
       printf(" -- Error Occurred ! : %d\n", data);
@@ -99,7 +97,7 @@ void processing(){
     // 습도 측정
     float humidity = dht.ReadHumidity();
 
-    printf("Temperature : $.2f, Humidity : %.2f\n", temperature, humidity);
+    printf("Temperature : %.2f, Humidity : %.2f\n", temperature, humidity);
   }
   else{   // 데이터를 읽는 도중 오류가 발생함
     printf(" -- Error Occurred ! : %d\n", data);
