@@ -2,10 +2,9 @@
 ## 온습도 센서를 사용하기 위한 Library
 링크 : !(https://os.mbed.com/users/cshao06/code/FSR/)
 
-## 현재상황
+## 온습도 센서 명칭 : DHT11 미니 온습도 센서모듈 [SZH-EK077]
 
-- 현재 Mbed홈페이지 서버다운이되서 서버 풀리는 즉시 테스트하고 사진 올리겠습니다.
-
+링크 : !(https://www.devicemart.co.kr/goods/view?no=1358495)
 
 ## 온습도 센서 라이브러리 임포트하는 과정
 
