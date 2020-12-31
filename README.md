@@ -69,7 +69,7 @@
 
 # 우선순위 4 그룹
 
-**12. Chapter12_블루투스 모듈 (plan)**
+**12. Chapter12_블루투스 모듈 (finish)**
 
     1. bluetooth test
     2. bluetoothLED
