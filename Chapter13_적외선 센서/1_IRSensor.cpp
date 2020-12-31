@@ -5,7 +5,7 @@
  */
 
 #include "mbed.h"
-
+// IRSensor의 값을 받기 위해 객체 선언
 AnalogIn IRSensor(A0);
 
 int main()
