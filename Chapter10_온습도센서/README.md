@@ -9,11 +9,11 @@
 
 ## 온습도 센서 라이브러리 임포트하는 과정
 
-![1]()
+![1](https://github.com/HongyeongJu/MbedCode/blob/master/Chapter10_%EC%98%A8%EC%8A%B5%EB%8F%84%EC%84%BC%EC%84%9C/1.jpg)
 
 - compiler 좌측 상단에 있는 Import 버튼을 누른다.
 
-![2]()
+![2](https://github.com/HongyeongJu/MbedCode/blob/master/Chapter10_%EC%98%A8%EC%8A%B5%EB%8F%84%EC%84%BC%EC%84%9C/2.jpg)
 
 - 라이브러리 탭에서 DHT를 누르고 다음과 같은 라이브러리를 임포트를 한다.
 
@@ -65,8 +65,13 @@ int main(){
 
 ### 결과 사진
 
+![1](https://github.com/HongyeongJu/MbedCode/blob/master/Chapter10_%EC%98%A8%EC%8A%B5%EB%8F%84%EC%84%BC%EC%84%9C/1_DHT11_realpicture.jpg)
+
+![2](https://github.com/HongyeongJu/MbedCode/blob/master/Chapter10_%EC%98%A8%EC%8A%B5%EB%8F%84%EC%84%BC%EC%84%9C/1_DHT1_result.jpg)
+
 ### 결과 회로 사진
 
+![1](https://github.com/HongyeongJu/MbedCode/blob/master/Chapter10_%EC%98%A8%EC%8A%B5%EB%8F%84%EC%84%BC%EC%84%9C/1_DHT11_picture.jpg)
 
 ## 2. DHT11UsingTicker.cpp
 ###코드
@@ -117,4 +122,8 @@ int main(){
 
 ### 결과 사진
 
+![1](https://github.com/HongyeongJu/MbedCode/blob/master/Chapter10_%EC%98%A8%EC%8A%B5%EB%8F%84%EC%84%BC%EC%84%9C/2_DHT11UsingTicker_result.jpg)
+
 ### 결과 회로 사진
+
+![1](https://github.com/HongyeongJu/MbedCode/blob/master/Chapter10_%EC%98%A8%EC%8A%B5%EB%8F%84%EC%84%BC%EC%84%9C/1_DHT11_picture.jpg)
