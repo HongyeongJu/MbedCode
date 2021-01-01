@@ -52,10 +52,10 @@
 
 # 우선순위 2 그룹
 
-**9. Chapter09_Unity-mbed 연동 프로그램(going)**
+**9. Chapter09_Unity-mbed 연동 프로그램(Finish)**
 
     1. 미사일 피하기게임 (Finish)
-    2. Unity_mbed 연동프로그램1(버튼으로 불키고 끄기) + (Fan)(going)
+    2. Unity_mbed 연동프로그램1(버튼으로 불키고 끄기) + (Fan)(Finish)
 
 # 우선순위 3 그룹
 

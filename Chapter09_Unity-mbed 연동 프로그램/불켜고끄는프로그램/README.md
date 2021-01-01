@@ -34,9 +34,9 @@
 
 - Hierachy 창에서 마우스 오른쪽 클릭하여 Light-> Point Light 객체를 생성한다. 또한 Point Light 객체의 이름을 Light로 변경한다.
 
-![7](https://github.com/HongyeongJu/MbedCode/blob/master/Chapter09_Unity-mbed%20%EC%97%B0%EB%8F%99%20%ED%94%84%EB%A1%9C%EA%B7%B8%EB%9E%A8/%EB%B6%88%EC%BC%9C%EA%B3%A0%EB%81%84%EB%8A%94%ED%94%84%EB%A1%9C%EA%B7%B8%EB%9E%A8/%EC%82%AC%EC%A7%84/7.jpg)
+![7](https://github.com/HongyeongJu/MbedCode/blob/master/Chapter09_Unity-mbed%20%EC%97%B0%EB%8F%99%20%ED%94%84%EB%A1%9C%EA%B7%B8%EB%9E%A8/%EB%B6%88%EC%BC%9C%EA%B3%A0%EB%81%84%EB%8A%94%ED%94%84%EB%A1%9C%EA%B7%B8%EB%9E%A8/%EC%82%AC%EC%A7%84/7_2.jpg)
 
-- 생성된 Point Light를 클릭하여 Inspector 창에서 위의 그림과 같이 변수를 변경한다.
+- 생성된 Light를 클릭하여 Inspector 창에서 위의 그림과 같이 변수를 변경한다.
 
 ![8](https://github.com/HongyeongJu/MbedCode/blob/master/Chapter09_Unity-mbed%20%EC%97%B0%EB%8F%99%20%ED%94%84%EB%A1%9C%EA%B7%B8%EB%9E%A8/%EB%B6%88%EC%BC%9C%EA%B3%A0%EB%81%84%EB%8A%94%ED%94%84%EB%A1%9C%EA%B7%B8%EB%9E%A8/%EC%82%AC%EC%A7%84/8.jpg)
 
