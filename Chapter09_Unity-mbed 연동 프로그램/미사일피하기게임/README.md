@@ -291,15 +291,21 @@ public class SpawnManager : MonoBehaviour
         }
     }
 
-    void Start()
+
+	private void Update()
     {
         // 1초에서 4초사이로 랜덤으로 설정
-        int time = Random.Range(1, 4);
-        // SpawnMissile 함수를 time 변수에 맞춰서 호출
-        InvokeRepeating("SpawnMissile", 1, time);
+        float time = Random.Range(0, 250);
+
+        if(time < 1.0f)
+		{
+            Invoke("SpawnMissile", 1.0f);
+        }
+
     }
 
 }
+
 
 
 ```
