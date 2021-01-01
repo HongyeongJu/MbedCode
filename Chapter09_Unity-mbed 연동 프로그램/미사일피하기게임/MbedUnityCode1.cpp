@@ -8,16 +8,16 @@ MbedUnityCode1.cpp
 
 // UART2 포트, 컴퓨터 연결
 Serial pc(USBTX, USBRX);
-// PA_5 핀으로 LED 제어
-DigitalOut LED(PA_5);
 
 // 로터리 인코더(S1핀, S2핀, Key핀)
 mRotaryEncoder encoder(D0,D1,D2);
+
+Ticker myTicker;
 int data;
 
-// 로터리 인코더를 회전할 때 호출되는 함수
+// 로터리 인코터의 데이터를 pc에 보내는 함수
 void rotate(){
-    int data = encoder.Get();
+    data = encoder.Get();
 
     if(data <0) {
         pc.putc(0);
@@ -31,12 +31,12 @@ void rotate(){
         pc.putc(20);
         encoder.Set(40);
     }
+
 }
 
 int main(){
-    LED = false;
-    // 회전되었을 때 호출되는 콜백함수 설정
-    encoder.attachROT(&rotate);
+    // Ticker를 사용하여 0.05초가 될때마다 로터리 인코터의 데이터를 pc에 보냄
+    myTicker.attach(&rotate, 0.05);
 
     while(true){
     }

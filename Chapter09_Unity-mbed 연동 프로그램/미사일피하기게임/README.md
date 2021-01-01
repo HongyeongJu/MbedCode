@@ -234,27 +234,20 @@ public class Moving : MonoBehaviour
             if (m_SerialPort.IsOpen)
             {
                 // Mbed로부터 1바이트의 데이터를 받는다.
-                string temp = (string)m_SerialPort.ReadExisting();
+                byte temp = (byte)m_SerialPort.ReadByte();
                 // 읽기 작업을 마쳐야하는 제한시간을 30 ms 로 설정
-                m_SerialPort.ReadTimeout = 30;
-                // 유의미한 데이터인지 검사.
-                if (temp != "")
-				{
-                    int a = temp[0];
-                    Debug.Log(a + "\n");
-                    // plane 이동 함수 호출
-                    CalculateMoving(a);
-                }
+                m_SerialPort.ReadTimeout = 10;
 
+                CalculateMoving(temp);
             }
         }
         catch (TimeoutException e) { }
     }
 
     //수신 받은 데이터를 이용하여 plane의 이동 결정
-    private void CalculateMoving(int m_data)
+    private void CalculateMoving(byte m_data)
     {
-        int value = m_data - 10;   //-10 ~ 10의 범위로 치환
+        int value = (int)m_data - 10;   //-10 ~ 10의 범위로 치환
         // 현재 위치로부터 움직이고자하는 위치까지 선형보간으로 움직임
         transform.position = Vector2.Lerp(transform.position, new Vector2(value, transform.position.y), 0.5f);
     }
@@ -437,16 +430,16 @@ MbedUnityCode1.cpp
 
 // UART2 포트, 컴퓨터 연결
 Serial pc(USBTX, USBRX);
-// PA_5 핀으로 LED 제어
-DigitalOut LED(PA_5);
 
 // 로터리 인코더(S1핀, S2핀, Key핀)
 mRotaryEncoder encoder(D0,D1,D2);
+
+Ticker myTicker;
 int data;
 
-// 로터리 인코더를 회전할 때 호출되는 함수
+// 로터리 인코터의 데이터를 pc에 보내는 함수
 void rotate(){
-    int data = encoder.Get();
+    data = encoder.Get();
 
     if(data <0) {
         pc.putc(0);
@@ -460,12 +453,12 @@ void rotate(){
         pc.putc(20);
         encoder.Set(40);
     }
+
 }
 
 int main(){
-    LED = false;
-    // 회전되었을 때 호출되는 콜백함수 설정
-    encoder.attachROT(&rotate);
+    // Ticker를 사용하여 0.05초가 될때마다 로터리 인코터의 데이터를 pc에 보냄
+    myTicker.attach(&rotate, 0.05);
 
     while(true){
     }
