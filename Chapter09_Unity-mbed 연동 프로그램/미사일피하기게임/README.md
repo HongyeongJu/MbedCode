@@ -235,7 +235,7 @@ public class Moving : MonoBehaviour
             {
                 // Mbed로부터 1바이트의 데이터를 받는다.
                 byte temp = (byte)m_SerialPort.ReadByte();
-                // 읽기 작업을 마쳐야하는 제한시간을 30 ms 로 설정
+                // 읽기 작업을 마쳐야하는 제한시간을 10 ms 로 설정
                 m_SerialPort.ReadTimeout = 10;
 
                 CalculateMoving(temp);
