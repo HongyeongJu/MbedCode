@@ -120,11 +120,11 @@ public class MissileCollision : MonoBehaviour
 	public GameObject text;
 	// 스코어 변수
 	int score = 0;
-    // Start is called before the first frame update
-    void Start()
-    {
+	// Start is called before the first frame update
+	void Start()
+	{
 
-    }
+	}
 
 	// 미사일과 collision 객체가 충돌되었을 때 호출되는 콜백 함수
 	private void OnCollisionEnter2D(Collision2D collision)
@@ -139,7 +139,7 @@ public class MissileCollision : MonoBehaviour
 			Destroy(collision.gameObject);
 
 			// 현재 게임이 진행중인가?
-			if (movingScript.isPlaying)
+			if (movingScript.IsPlaying())
 			{
 				// 점수 증가 및 표시
 				string scoreString = string.Format("Score : {0}", ++score);
@@ -150,10 +150,11 @@ public class MissileCollision : MonoBehaviour
 
 	// Update is called once per frame
 	void Update()
-    {
+	{
 
-    }
+	}
 }
+
 
 ```
 
@@ -168,20 +169,18 @@ using System;
 
 public class Moving : MonoBehaviour
 {
-    // Mbed와 시리얼 통신을 위한 SerialPort 객체 생성 (COM 번호, 보율 , 패리티비트, data비트, 스톱 비트)
-    SerialPort m_SerialPort = new SerialPort("COM5", 9600, Parity.None, 8, StopBits.One);
-
-    // Mbed로부터 전달받은 데이터
-    string m_data = null;
-    // 예전 인코더값 비교 변수
-    int last_value = 0;
-    // 시리얼 통신
-    bool s_flag = false;
 
     // 게임오버 객체
-    public GameObject GameOverObject;
+    [SerializeField] GameObject gameOverObject;
     // 게임 진행 플래그 변수
-    public bool isPlaying = true;
+    [SerializeField] bool isPlaying = true;
+
+    // 이전 인코더값 저장 변수
+    int last_value = 0;
+
+    // Mbed와 시리얼 통신을 위한 SerialPort 객체 생성 (COM 번호, 보율, 패리티비트, data비트, 스톱 비트)
+    SerialPort m_SerialPort = new SerialPort("COM3", 9600, Parity.None, 8, StopBits.One);
+
     // Start is called before the first frame update
     void Start()
     {
@@ -189,153 +188,98 @@ public class Moving : MonoBehaviour
         m_SerialPort.Open();
     }
 
-    // ms 단위의 딜레이를 주는 함수
-    private static DateTime Delay(int MS)
-    {
-        DateTime ThisMoment = DateTime.Now;
-        TimeSpan duration = new TimeSpan(0, 0, 0, 0, MS);
-        DateTime AfterWards = ThisMoment.Add(duration);
-
-        while (AfterWards >= ThisMoment)
-        {
-            ThisMoment = DateTime.Now;
-        }
-
-        return DateTime.Now;
-    }
-
     // 미사일과 비행기가 충돌되었을 때 발생하는 콜백함수
     private void OnCollisionEnter2D(Collision2D collision)
-	{
-		if(collision.gameObject.tag == "Missile")
-		{
+    {
+        //만약 충돌한 대상이 Missile 이라는 태그가 달려있다면,
+        if (collision.gameObject.tag == "Missile")
+        {
+            //충돌된 오브젝트 (missile)를 파괴 시킴
             Destroy(collision.gameObject);
-            GameOverObject.active = true;
-            SponManager sponManager = GameObject.Find("System").GetComponent<SponManager>();
-            sponManager.enableSpawn = false;
+            //GameOver오브젝트를 활성화시켜 화면에 노출
+            gameOverObject.active = true;
+            //System으로 명명된 게임 오브젝트를 찾아서, 이 시스템 오브젝트의 sponManager 컴포넌트를 불러옴
+            SpawnManager spawnManager = GameObject.Find("System").GetComponent<SpawnManager>();
+            //System 오브젝트의 sponManager 컴포넌트에서, Spawn
+            spawnManager.enableSpawn = false;
             isPlaying = false;
-		}
-	}
+        }
+    }
 
-	// Update is called once per frame
-	void Update()
+    // Update is called once per frame
+    void FixedUpdate()
     {
         // 게임이 진행중이면 Serial_Communication()함수를 통해 Mbed와 시리얼 통신
-		if (isPlaying)
-		{
+        if (isPlaying)
+        {
+            //직렬 통신 함수 호출 (mbed로 부터 데이터 수신)
             Serial_Communication();
         }
-		else
-		{
+        else
+        {
             // R키를 누르면 게임 다시시작
-			if (Input.GetKey(KeyCode.R))
-			{
+            if (Input.GetKey(KeyCode.R))
+            {
                 SceneManager.LoadScene(0);
-			}
-		}
+            }
+        }
     }
 
     // Mbed와 시리얼 통신을 함수
     private void Serial_Communication()
-	{
+    {
         try
         {
+            //시리얼 포트가 정상적으로 연결되어 있으면,
             if (m_SerialPort.IsOpen)
             {
-                // Mbed로부터 데이터를 받는다.
-                String temp = m_SerialPort.ReadExisting();
-                assemble_data(temp);
-                Delay(20);
+                // Mbed로부터 1바이트의 데이터를 받는다.
+                string temp = (string)m_SerialPort.ReadExisting();
+                // 읽기 작업을 마쳐야하는 제한시간을 30 ms 로 설정
+                m_SerialPort.ReadTimeout = 30;
+                // 유의미한 데이터인지 검사.
+                if (temp != "")
+				{
+                    int a = temp[0];
+                    Debug.Log(a + "\n");
+                    // plane 이동 함수 호출
+                    CalculateMoving(a);
+                }
+
             }
         }
-        catch (Exception e)
-        {
-
-        }
+        catch (TimeoutException e) { }
     }
 
-    // Mbed로부터 받은 데이터를 조립하여 의미있는 데이터로 만드는 함수
-    void assemble_data(string temp)
-	{
-        // 문자열이 비어있는지 확인
-        if (temp != "")
-        {
-            // 문자열에서 시작기호 #가 포함되어있으면 데이터를 넣는 것을 시작한다.
-            if (temp.Contains("#") && !s_flag)
-            {
-                m_data += temp.Substring(temp.IndexOf("#"));
-                s_flag = true;
-                temp = "";
-            }
-
-            // #와 $이 포함되지 않은 내용부분이라면 내용을 넣는다.
-            if(!temp.Contains("$") &&s_flag)
-            {
-                m_data += temp.Trim();
-                temp = "";
-            }
-
-            // 문자열에서 종료기호 $ 가 포함되어있으면 완전한 데이터를 처리한다.
-            if (temp.Contains("$") && s_flag)
-            {
-                m_data += temp.Substring(0, temp.IndexOf("$") + 1);
-                // 의미있는 데이터를 가지고 어느 방향으로 움직여야하는지 결정한다.
-                CalculateMoving(m_data);
-                m_data = "";
-                temp = "";
-                s_flag = false;
-            }
-        }
-    }
-
-    // 문자열을 통해서 어느 방향으로 움직일지 결정하는 함수
-    private void CalculateMoving(String m_data)
+    //수신 받은 데이터를 이용하여 plane의 이동 결정
+    private void CalculateMoving(int m_data)
     {
-        string temp;
-        if (m_data.Contains("#") && m_data.Contains("$"))
-        {
-            // 문자열 (#숫자$) 안에 있는 숫자를 추출한다.
-            temp = m_data.Substring(1, m_data.IndexOf("$") - 1);
-            // 문자열을 숫자로 추출한다.
-            int value = int.Parse(temp);
-            //왼쪽
-            if ((last_value - value) >= 0)
-            {
-                // 비행기는 x축으로 10의 밖으로 벗어나면 안된다.
-                if (transform.position.x < 10)
-                {
-                    transform.Translate(Vector3.right * 3 * Time.deltaTime);
-                }
-            }
-            // 오른쪽 이동
-            else
-            {
-                // 비행기는 x축으로 -10의 밖으로 벗어나면 안된다.
-                if (transform.position.x > -10)
-                {
-                    transform.Translate(Vector3.left * 3 * Time.deltaTime);
-                }
-            }
-            // 예전 숫자를 기록한다.
-            last_value = value;
-        }
+        int value = m_data - 10;   //-10 ~ 10의 범위로 치환
+        // 현재 위치로부터 움직이고자하는 위치까지 선형보간으로 움직임
+        transform.position = Vector2.Lerp(transform.position, new Vector2(value, transform.position.y), 0.5f);
     }
-
+    //해당 오브젝트가 파괴되면,
     private void OnDestroy()
     {
+        //시리얼 포트를 닫아준다.
         m_SerialPort.Close();
     }
+
+    public bool IsPlaying()
+	{
+        return isPlaying;
+	}
 }
 
 ```
 
-### SponManager.cs
+### SpawnManager.cs
 ```cs
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class SponManager : MonoBehaviour
+public class SpawnManager : MonoBehaviour
 {
     // 스폰 스위치
     public bool enableSpawn = false;
@@ -344,7 +288,7 @@ public class SponManager : MonoBehaviour
 
     // 미사일 객체를 랜덤으로 생성하는 함수
     void SpawnMissile()
-	{
+    {
         // 랜덤하게 x축으로 -10.0f , 10.0f 범위로 설정
         float randomX = Random.Range(-10.0f, 10.0f);
         // 스폰 스위치가 On이면 미사일 객체 생성
@@ -354,8 +298,8 @@ public class SponManager : MonoBehaviour
         }
     }
 
-	void Start()
-	{
+    void Start()
+    {
         // 1초에서 4초사이로 랜덤으로 설정
         int time = Random.Range(1, 4);
         // SpawnMissile 함수를 time 변수에 맞춰서 호출
@@ -363,6 +307,7 @@ public class SponManager : MonoBehaviour
     }
 
 }
+
 
 ```
 
@@ -468,11 +413,10 @@ public class missileMoving : MonoBehaviour
     }
 
 
-	// Update is called once per frame
-	void Update()
+    // Update is called once per frame
+    void Update()
     {
-        Vector3 direction = new Vector3(0, -1, 0);
-        transform.Translate(direction * Time.deltaTime * speed, Space.World );
+        transform.Translate(Vector2.down * Time.deltaTime * speed, Space.World);
     }
 }
 
@@ -484,7 +428,7 @@ public class missileMoving : MonoBehaviour
 ### Mbed 코드
 ```c++
 /*
-2020-12-28    Mbed-Unity 연동 프로그램 (로터리 엔코더 모듈 사용)
+2020-01-01    Mbed-Unity 연동 프로그램 (로터리 엔코더 모듈 사용)
 회로 : page 222
 MbedUnityCode1.cpp
  */
@@ -495,28 +439,33 @@ MbedUnityCode1.cpp
 Serial pc(USBTX, USBRX);
 // PA_5 핀으로 LED 제어
 DigitalOut LED(PA_5);
-// 이벤트 큐
-EventQueue *queue = mbed_event_queue();
 
 // 로터리 인코더(S1핀, S2핀, Key핀)
 mRotaryEncoder encoder(D0,D1,D2);
 int data;
 
-// 로터리 인코더 회전을 할 때 Unity에게 값을 전송 (#(숫자)$)형식으로 전달
-void print(){
-   pc.printf("#%d$\n", encoder.Get());
-}
-
 // 로터리 인코더를 회전할 때 호출되는 함수
 void rotate(){
-    queue->call(&print);
+    int data = encoder.Get();
+
+    if(data <0) {
+        pc.putc(0);
+        encoder.Set(0);
+    }
+    // 로터리 인코더의 한바퀴는 40
+    else if(data < 40){
+        pc.putc(data/2);
+    }
+    else {
+        pc.putc(20);
+        encoder.Set(40);
+    }
 }
 
 int main(){
     LED = false;
     // 회전되었을 때 호출되는 콜백함수 설정
     encoder.attachROT(&rotate);
-    queue->dispatch_forever();
 
     while(true){
     }
