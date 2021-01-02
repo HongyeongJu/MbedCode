@@ -171,7 +171,7 @@ public class Control : MonoBehaviour
 
 - Hierarchy 창에서 마우스 오른쪽 버튼을 누르고 UI -> Toggle 버튼을 눌러서 Toggle 버튼을 만든다.
 
-![21](https://github.com/HongyeongJu/MbedCode/blob/master/Chapter09_Unity-mbed%20%EC%97%B0%EB%8F%99%20%ED%94%84%EB%A1%9C%EA%B7%B8%EB%9E%A8/%EB%B6%88%EC%BC%9C%EA%B3%A0%EB%81%84%EB%8A%94%ED%94%84%EB%A1%9C%EA%B7%B8%EB%9E%A8/%EC%82%AC%EC%A7%84/21.jpg)
+![21](https://github.com/HongyeongJu/MbedCode/blob/master/Chapter09_Unity-mbed%20%EC%97%B0%EB%8F%99%20%ED%94%84%EB%A1%9C%EA%B7%B8%EB%9E%A8/%EB%B6%88%EC%BC%9C%EA%B3%A0%EB%81%84%EB%8A%94%ED%94%84%EB%A1%9C%EA%B7%B8%EB%9E%A8/%EC%82%AC%EC%A7%84/21_2.jpg)
 
 - Hierarchy 에서 Canvas-> Toggle 을 누르고 다음과 같이 변수를 변경한다.
 
@@ -179,9 +179,9 @@ public class Control : MonoBehaviour
 
 - 토글 버튼아래에 있는 Label을 다음과 같이 변수를 바꾼다.
 
-![23](https://github.com/HongyeongJu/MbedCode/blob/master/Chapter09_Unity-mbed%20%EC%97%B0%EB%8F%99%20%ED%94%84%EB%A1%9C%EA%B7%B8%EB%9E%A8/%EB%B6%88%EC%BC%9C%EA%B3%A0%EB%81%84%EB%8A%94%ED%94%84%EB%A1%9C%EA%B7%B8%EB%9E%A8/%EC%82%AC%EC%A7%84/23.jpg)
+![23](https://github.com/HongyeongJu/MbedCode/blob/master/Chapter09_Unity-mbed%20%EC%97%B0%EB%8F%99%20%ED%94%84%EB%A1%9C%EA%B7%B8%EB%9E%A8/%EB%B6%88%EC%BC%9C%EA%B3%A0%EB%81%84%EB%8A%94%ED%94%84%EB%A1%9C%EA%B7%B8%EB%9E%A8/%EC%82%AC%EC%A7%84/23_2.jpg)
 
-- 토글 버튼 아래에 있는 Checkmark도 다음과 같이 변수를 바꾼다.
+- 토글 버튼 아래에 있는 Background도 다음과 같이 변수를 바꾼다.
 
 ![24](https://github.com/HongyeongJu/MbedCode/blob/master/Chapter09_Unity-mbed%20%EC%97%B0%EB%8F%99%20%ED%94%84%EB%A1%9C%EA%B7%B8%EB%9E%A8/%EB%B6%88%EC%BC%9C%EA%B3%A0%EB%81%84%EB%8A%94%ED%94%84%EB%A1%9C%EA%B7%B8%EB%9E%A8/%EC%82%AC%EC%A7%84/24.jpg)
 
