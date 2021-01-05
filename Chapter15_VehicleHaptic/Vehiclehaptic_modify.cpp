@@ -3,8 +3,8 @@
 #define PI        (3.141592653589793238462)
 #define AMPLITUDE (1.0)    // 진폭 : 4095 = 3.3V
 #define PHASE     (PI * 1) // 2 * PI는 1개의 주기
-#define RANGE     (4096/2) // 12 bits DAC
-#define OFFSET    (4096/2) // 12 bits DAC
+#define RANGE     (4095/2) // 12 bits DAC   (0~4095 범위)
+#define OFFSET    (4095/2) // 12 bits DAC   (0~4095 범위)
 
 // 피에조 액추에이터에 출력하기 위한 AnalogOut 클래스 선언
 AnalogOut my_output(PA_4);
